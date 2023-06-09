@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  width: -webkit-fill-available;
+  height: 100vh;
+  margin: 0;
   padding: 2rem;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1pt!important;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+a {
+  text-decoration: none;
 }
+
+main {
+  padding-bottom: 2rem;
+}
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 1em rgb(253,40,104));
+  animation: logo-spin 1s ;
 }
 
 @keyframes logo-spin {
@@ -27,10 +34,90 @@
   }
 }
 
+.shape-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.shape-selector label {
+  font-weight: bold;
+}
+
+.shape-selector input[type="radio"] {
+  display: none;
+}
+
+.shape-selector input[type="radio"] + label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgb(22 16 16);
+  cursor: pointer;
+}
+
+.shape-selector input[type="radio"]:checked + label {
+  border: 3px solid #ff0000;
+}
+
+#shape1 {
+  background-color: #ccc;
+}
+
+#shape2 {
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+#shape3 {
+  background-color: #ccc;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+#shape4 {
+  background-color: #ccc;
+  position: relative;
+}
+
+#shape4:before,
+#shape4:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 52px;
+  height: 80px;
+  background-color: #ccc;
+  border-radius: 50px 50px 0 0;
+}
+
+#shape4:before {
+  left: 10px;
+  transform: rotate(-45deg);
+}
+
+#shape4:after {
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+
+.btn {
+  width: 300px;
+  padding: 1rem;
+}
+.btn:hover {
+  background-color: white;
+  transition: .36s all;
+  border-color: black;
+  color: black;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+
 }
 
 .card {
@@ -40,3 +127,66 @@
 .read-the-docs {
   color: #888;
 }
+
+.image-logo {
+  width: 102px;
+  border-radius: 3%;
+  box-shadow: 6px 5px 0px 0px #05050ae0, -5px -6px 0px 0px #05050ae0;
+}
+
+.text-logo {
+  font-size: 3rem;
+  font-family: 'Satisfy', cursive;
+}
+
+.form-mensagem-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-mensagem-create form {
+  width: 52vw;
+}
+
+.form-mensagem-create .form-field { 
+  display: flex;
+  flex-direction: column;  
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.field-info-curso {
+  flex-direction: row!important;
+  gap: 0.2rem;
+}
+
+.field-info-curso div {
+  width: 100%;
+  height: 30px;
+}
+
+.field-info-curso div select {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem 0.3rem;
+}
+
+.sr-only {
+  display: none;
+}
+
+.label {
+  font-weight: 400;
+}
+
+.input {
+  margin: 1rem 0;
+  padding: 12px 6px;
+  text-indent: 6pt;
+  border-radius: 3px;
+}
+
+.input::placeholder {
+  color: aliceblue;
+} 
