@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function FormCreateMensagem() {
+  const [colorInput, setColorInput] = useState();
+
   return (
     <div className="form-mensagem-create">
       <form action="">
@@ -81,18 +85,18 @@ function FormCreateMensagem() {
           <label htmlFor="" style={{ marginBottom: "0.6rem" }}>
             Forma da cartinha
           </label>
-          <div class="shape-selector">
+          <div className="shape-selector">
             <input type="radio" id="shape1" name="shape" value="square" />
-            <label for="shape1"></label>
+            <label htmlFor="shape1"></label>
 
             <input type="radio" id="shape2" name="shape" value="circle" />
-            <label for="shape2"></label>
+            <label htmlFor="shape2"></label>
 
             <input type="radio" id="shape3" name="shape" value="triangle" />
-            <label for="shape3"></label>
+            <label htmlFor="shape3"></label>
 
             <input type="radio" id="shape4" name="shape" value="heart" />
-            <label for="shape4"></label>
+            <label htmlFor="shape4"></label>
           </div>
         </div>
 
@@ -104,7 +108,7 @@ function FormCreateMensagem() {
             style={{
               width: "100px",
               marginTop: "0.6rem",
-              height: "32px",
+              height: "32px"
             }}
           >
             <option value="Físico">Físico</option>
@@ -113,9 +117,9 @@ function FormCreateMensagem() {
         </div>
 
         <button className="btn">Enviar</button>
-      </form>
+      </form> 
     </div>
   );
 }
 
-export default FormCreateMensagem;
+export { FormCreateMensagem };

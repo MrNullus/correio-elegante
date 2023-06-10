@@ -1,24 +1,14 @@
-import { useState } from 'react';
-
-import Header from './components/Header';
-import FormCreateMensagem from './components/FormCreateMensagem';
+import { RouterProvider } from 'react-router-dom';
+import Router from './routes/root';
 import './App.css';
 
-function App() {
-  const [colorInput, setColorInput]  = useState();
-
+function App() {  
   return (
-    <>
-      <main>
-        <Header />
-
-        <FormCreateMensagem />        
-
-
-      </main>
-    </>
+    <RouterProvider 
+      router={Router} 
+    />    
   );
 }
 
 export default App;
- 
+  
