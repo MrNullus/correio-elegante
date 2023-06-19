@@ -27,7 +27,7 @@ function Header() {
       </h1>
 
       <div style={{ fontSize: '2.4rem' }}>
-        <a href="#" style={{ color: 'rgb(253,40,104)' }}>
+        <a href="/login" style={{ color: 'rgb(253,40,104)' }}>
           <MdAdminPanelSettings />
         </a>
       </div>
