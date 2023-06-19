@@ -10,8 +10,8 @@ const Login = () => {
         <h2>Login</h2>
 
         <div>
-          <form action="">
-            <div className="form-field">
+          <form action="/user/register">
+            {/* <div className="form-field">
               <input 
                 type="email" 
                 name="" 
@@ -25,14 +25,46 @@ const Login = () => {
               <input 
                 type="password" 
                 name="" 
-                id="" 
+                id=""  
                 className='input' 
               />
-            </div>
+            </div> */}
+
+            <div className="form-field">
+              <input 
+                type="text" 
+                name="nome"
+                id=""  
+                className='input' 
+              />
+            </div>  
+
+            <div className="form-field">
+              <input 
+                type="email" 
+                name="email"
+                id=""  
+                className='input' 
+              />
+            </div>  
+
+            <div className="form-field">
+              <input 
+                type="password" 
+                name="password"
+                id=""  
+                className='input' 
+              />
+            </div>  
 
             <button className="btn">
               Entrar
             </button>
+            <br />
+
+            <a href="/register">
+              Cadastro   
+            </a>
           </form>
         </div>
       </main>
