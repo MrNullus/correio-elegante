@@ -95,7 +95,7 @@ class CorreioController {
 
       connection.release();
 
-      if (results.affectedRows < 0) {
+      if (results.affectedRows === 0) {
         return res.status(500).json({ error: 'ID inválido' });
       }
 
