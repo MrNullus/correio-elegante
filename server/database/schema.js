@@ -1,13 +1,23 @@
 const db = require('../configs/database');
+const Database = require('../utils/Database');
 
-const procedure_get_message = require('./GetMessage');
-const procedure_update_message_status = require('./UpdateMessageStatus');
+const table_user = require('./tables/user');
+const table_message = require('./tables/message');
 
-const sql = `
-  ${procedure_update_message_status}
+const procedure_get_message = require('./procedures/GetMessage');
+const procedure_update_message_status = require('./procedures/UpdateMessageStatus');
 
-  ${procedure_get_message}
-`;
+
+let query = Database.prepareQuery([ 
+  table_user,
+  table_message,
+  procedure_update_message_status, 
+  procedure_get_message 
+]);
+
+console.log('====================================');
+console.log(query);
+console.log('====================================');
 
 db.getConnection((err, connection) => {
   if (err) {
@@ -17,7 +27,7 @@ db.getConnection((err, connection) => {
 
   connection.query(sql, (err, results) => {
     connection.release(); 
-
+    
     if (err) {
       return res.status(500).json({ error: 'Erro interno do servidor' });
     }
