@@ -1,6 +1,5 @@
-const db = require('../configs/database'); 
 
-const sql = `
+const procedure_get_message = `
   DELIMITER $$
 
   CREATE PROCEDURE GetMessage()
@@ -11,20 +10,4 @@ const sql = `
   DELIMITER ;
 `;
 
-db.getConnection((err, connection) => {
-  if (err) {
-    console.error('Erro ao obter conexão do pool:', err);
-    return res.status(500).json({ error: 'Erro interno do servidor' });
-  }
-
-  connection.query(sql, (err, results) => {
-    connection.release(); // Libere a conexão para o pool
-
-    if (err) {
-      console.error('Erro ao executar a consulta:', err);
-      return res.status(500).json({ error: 'Erro interno do servidor' });
-    }
-
-    res.json(results);
-  });
-});
+module.exports = procedure_get_message;
