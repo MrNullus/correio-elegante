@@ -1,7 +1,7 @@
 <h1 align="center">Correio Elegante :love_letter:</h1>
 
 <p align="center">
-  <img src=".github/correio_elegante_logo.png" alt="Correio Elegante Logo" width="200">
+  <img src=".github/correio_elegante_logo.jpg" alt="Correio Elegante Logo" width="200">
 </p>
 
 <p align="center">Um sistema de envio de cartas elegantes</p>
