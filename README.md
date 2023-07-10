@@ -7,8 +7,8 @@
 <p align="center">Um sistema de envio de cartas elegantes</p>
 
 <p align="center">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/mrnullus/correio-elegante?color=green">
-  <img alt="GitHub license" src="https://img.shields.io/github/license/mrnullus/correio-elegante">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/MrNullus/correio-elegante?color=green">
+  <img alt="GitHub license" src="https://img.shields.io/github/license/MrNullus/correio-elegante">
 </p>
 
 <p align="center">
