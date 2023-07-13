@@ -66,12 +66,40 @@ router.post('/', correioController.insertData);
  *               message_id:
  *                 type: integer
  *                 description: ID do correio elegante a ser atualizado.
- *               content:
+ *               nome_destinatario:
  *                 type: string
- *                 description: Conteúdo do correio elegante.
+ *                 description: Nome do destinatário do correio elegante.
+ *               serie_escolhida:
+ *                 type: string
+ *                 description: Série escolhida do correio elegante.
+ *               curso_escolhido:
+ *                 type: string
+ *                 description: Curso escolhido do correio elegante.
+ *               periodo:
+ *                 type: string
+ *                 description: Período do correio elegante.
+ *               dica:
+ *                 type: string
+ *                 description: Dica do correio elegante.
+ *               cor_bilhete:
+ *                 type: string
+ *                 description: Cor do bilhete do correio elegante.
+ *               forma_cartinha:
+ *                 type: string
+ *                 description: Forma de envio da cartinha do correio elegante.
+ *               forma_pagamento:
+ *                 type: string
+ *                 description: Forma de pagamento do correio elegante.
  *             example:
  *               message_id: 2
- *               content: "Conteúdo atualizado do correio elegante."
+ *               nome_destinatario: "Nome atualizado"
+ *               serie_escolhida: "Série atualizada"
+ *               curso_escolhido: "Curso atualizado"
+ *               periodo: "Período atualizado"
+ *               dica: "Dica atualizada"
+ *               cor_bilhete: "Cor atualizada"
+ *               forma_cartinha: "Forma de envio atualizada"
+ *               forma_pagamento: "Forma de pagamento atualizada"
  *     responses:
  *       '200':
  *         description: OK
@@ -79,6 +107,7 @@ router.post('/', correioController.insertData);
  *         description: Erro interno do servidor
  */
  router.put('/', correioController.updateData);
+
 
 
 /**
