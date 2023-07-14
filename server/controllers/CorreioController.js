@@ -7,9 +7,9 @@ class CorreioController {
    * @param {object} res - Objeto de resposta.
    * @returns {object} - Lista de correios elegantes.
    */
-  async selectAll(req, res) {
-    let result = await Message.getAllMessages();
-    res.json(result);
+  selectAll(req, res) {
+    let result = Message.getAllMessages();
+    res.json(Message.getAllMessages());
   }
 
   /**
