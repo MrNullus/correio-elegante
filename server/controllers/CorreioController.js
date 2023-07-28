@@ -1,4 +1,4 @@
-const Message = require('../models/Message');
+const db = require('../configs/database');
 
 class CorreioController {
   /**
@@ -7,9 +7,20 @@ class CorreioController {
    * @param {object} res - Objeto de resposta.
    * @returns {object} - Lista de correios elegantes.
    */
-  selectAll(req, res) {
-    let result = Message.getAllMessages();
-    res.json(Message.getAllMessages());
+  async selectAll(req, res) {
+   try {
+      const query = 'CALL GetMessage()';
+      db.query(query, (err, results) => {
+        if (err) {
+          console.error('Erro ao executar a consulta:', err);
+          return res.status(500).json({ error: 'Erro interno do servidor' });
+        }
+        res.json(results);
+      });
+    } catch (error) {
+      console.error('Erro ao executar a consulta:', error);
+      res.status(500).json({ error: 'Erro interno do servidor' });
+    }
   }
 
   /**
@@ -19,8 +30,24 @@ class CorreioController {
    * @returns {object} - Mensagem de sucesso.
    */
   async insertData(req, res) {
-    let result = await Message.createMessage(req);
-    res.json(result);
+    try {
+      const { user_id, content, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento } = req.body;
+      const created_at = new Date();
+
+      const query = 'INSERT INTO message (user_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+      const values = [user_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento];
+
+      db.query(query, values, (err, result) => {
+        if (err) {
+          console.error('Erro ao executar a consulta:', err);
+          return res.status(500).json({ error: values });
+        }
+        res.json({ message: 'Dados inseridos com sucesso' });
+      });
+    } catch (error) {
+      console.error('Erro ao executar a consulta:', error);
+      res.status(500).json({ error: 'Erro interno do servidor' });
+    }
   }
 
   /**
@@ -30,8 +57,23 @@ class CorreioController {
    * @returns {object} - Mensagem de sucesso.
    */
   async updateData(req, res) {
-    let result = await Message.updateMessage(req);
-    res.json(result);
+    try {
+      const { message_id, content } = req.body;
+
+      const query = 'UPDATE message SET content = ? WHERE message_id = ?';
+      const values = [content, message_id];
+
+      db.query(query, values, (err, result) => {
+        if (err) {
+          console.error('Erro ao executar a consulta:', err);
+          return res.status(500).json({ error: 'Erro interno do servidor' });
+        }
+        res.json({ message: 'Dados atualizados com sucesso' });
+      });
+    } catch (error) {
+      console.error('Erro ao executar a consulta:', error);
+      res.status(500).json({ error: 'Erro interno do servidor' });
+    }
   }
 
   /**
@@ -40,11 +82,29 @@ class CorreioController {
    * @param {object} res - Objeto de resposta.
    * @returns {object} - Mensagem de sucesso.
    */
-  async deleteData(req, res) {
-    const { messageId } = req.params;
-    await Message.deleteMessage(messageId);
+   async deleteData(req, res) {
+    try {
+      const message_id = req.params.message_id;
 
-    res.json(result);
+      const query = 'CALL UpdateMessageStatus(?)';
+      const values = [message_id];
+
+      db.query(query, values, (err, results) => {
+        if (err) {
+          console.error('Erro ao executar a consulta:', err);
+          return res.status(500).json({ error: 'Erro interno do servidor' });
+        }
+
+        if (results.affectedRows === 0) {
+          return res.status(500).json({ error: 'ID inválido' });
+        }
+
+        res.json({ message: 'Deletado com sucesso' });
+      });
+    } catch (error) {
+      console.error('Erro ao executar a consulta:', error);
+      res.status(500).json({ error: 'Erro interno do servidor' });
+    }
   }
 }
 

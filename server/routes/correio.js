@@ -19,7 +19,7 @@ const correioController = new CorreioController();
  router.get('/', correioController.selectAll);
 
 
- /**
+/**
  * @swagger
  * /api/correio-elegante:
  *   post:
@@ -38,9 +38,50 @@ const correioController = new CorreioController();
  *               content:
  *                 type: string
  *                 description: Conteúdo do correio elegante.
+ *               status:
+ *                 type: string
+ *                 description: Status do correio elegante.
+ *               created_at:
+ *                 type: string
+ *                 format: date-time
+ *                 description: Data de criação do correio elegante.
+ *               nome_destinatario:
+ *                 type: string
+ *                 description: Nome do destinatário.
+ *               serie_escolhida:
+ *                 type: integer
+ *                 description: Série escolhida.
+ *               curso_escolhido:
+ *                 type: string
+ *                 description: Curso escolhido.
+ *               periodo:
+ *                 type: string
+ *                 description: Período do correio elegante.
+ *               dica:
+ *                 type: string
+ *                 description: Dica do correio elegante.
+ *               cor_bilhete:
+ *                 type: string
+ *                 description: Cor do bilhete.
+ *               forma_cartinha:
+ *                 type: string
+ *                 description: Forma de envio do correio elegante.
+ *               forma_pagamento:
+ *                 type: string
+ *                 description: Forma de pagamento do correio elegante.
  *             example:
  *               user_id: 1
- *               content: "Olá! Este é um correio elegante."           
+ *               content: "Conteúdo do correio elegante."
+ *               status: "ativo"
+ *               created_at: "2023-07-31T23:34:40.000Z"
+ *               nome_destinatario: "Nome do destinatário"
+ *               serie_escolhida: 0
+ *               curso_escolhido: "Curso escolhido"
+ *               periodo: "Período do correio elegante"
+ *               dica: "Dica do correio elegante"
+ *               cor_bilhete: "Cor do bilhete"
+ *               forma_cartinha: "Forma de envio do correio elegante"
+ *               forma_pagamento: "Forma de pagamento do correio elegante"
  *     responses:
  *       '200':
  *         description: OK
