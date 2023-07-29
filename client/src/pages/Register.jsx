@@ -1,9 +1,14 @@
 import React from 'react';
+
+import axios from 'axios';
 import { useState } from 'react';
 
 import Header from '../components/Header';
 
+
 const Login = () => {
+  const baseURLUsers = 'localhost:3000/api/correio-elegante/user';
+
   const [formValues, setFormValues] = useState({
     firstname: '',
     lastname: '',
@@ -18,6 +23,17 @@ const Login = () => {
       ...prevValues,
       [name]: value,
     }));
+  };
+
+
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+
+    axios.get(baseURLUsers).then(( response ) => {
+      console.log('====================================');
+      console.log(response.data);
+      console.log('====================================');
+    })
   };
 
   console.log('====================================');
@@ -36,7 +52,7 @@ const Login = () => {
           <h2 className='title'>Register</h2>
 
           <div className='form form-register'>
-            <form method='POST'>
+            <form method='POST' onSubmit={handleSubmitForm}>
               <div className="form-field">
                 <input 
                   type="text" 
