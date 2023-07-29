@@ -27,7 +27,7 @@ function FormCreateMensagem() {
             </select>
           </div>
 
-          <div>
+          <div className="form-field">
             <label htmlFor="" className="sr-only">
               Curso
             </label>
