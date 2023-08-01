@@ -20,6 +20,16 @@ main {
   padding-bottom: 2rem;
 }
 
+form {
+  width: 90%;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin: 1rem;
+  color: rgb(253,40,104);
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 1em rgb(253,40,104));
   animation: logo-spin 1s ;
@@ -103,13 +113,14 @@ main {
 
 
 .btn {
-  width: 300px;
+  width: 100%;
   padding: 1rem;
+  border: 3px solid rgb(0, 0, 0);
 }
 .btn:hover {
   background-color: white;
   transition: .36s all;
-  border-color: black;
+  border: 3px solid rgb(238, 6, 122);
   color: black;
 }
 
@@ -139,21 +150,22 @@ main {
   font-family: 'Satisfy', cursive;
 }
 
-.form-mensagem-create {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 52vw;
 }
 
-.form-mensagem-create form {
-  width: 52vw;
+form .btn {
+  margin-top: 1rem;
 }
 
 .form-mensagem-create .form-field { 
   display: flex;
   flex-direction: column;  
   text-align: left;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .field-info-curso {
@@ -181,12 +193,33 @@ main {
 }
 
 .input {
+  outline-color: #ff0000!important;
   margin: 1rem 0;
-  padding: 12px 6px;
+  padding: 16px 6px;
   text-indent: 6pt;
   border-radius: 3px;
+  width: 95%;
+  background-color: black;
+  color: aliceblue;
 }
 
 .input::placeholder {
   color: aliceblue;
-} 
+}
+
+.overflow {
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: auto;
+  background-color: #fafafa;
+  border: 4px black dotted;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  position: relative;
+}

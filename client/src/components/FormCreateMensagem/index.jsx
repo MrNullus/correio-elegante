@@ -4,7 +4,11 @@ function FormCreateMensagem() {
   const [colorInput, setColorInput] = useState();
 
   return (
-    <div className="form-mensagem-create">
+      <center>
+   <div className="overflow">
+    <h2 className="title">Cartinha</h2>
+
+    <div className="form form-mensagem-create">
       <form action="">
         <div className="form-field">
           <label htmlFor="">Nome do Destinatario</label>
@@ -27,7 +31,7 @@ function FormCreateMensagem() {
             </select>
           </div>
 
-          <div>
+          <div className="form-field">
             <label htmlFor="" className="sr-only">
               Curso
             </label>
@@ -117,8 +121,10 @@ function FormCreateMensagem() {
         </div>
 
         <button className="btn">Enviar</button>
-      </form> 
+      </form>
     </div>
+   </div>
+    </center>
   );
 }
 
