@@ -1,50 +1,73 @@
 const express = require('express');
 const router = express.Router();
 
-const CorreioController = require('../controllers/CorreioController');
-const correioController = new CorreioController();
+const MessageController = require('../controllers/MessageController');
+
+/**
+ * @swagger
+ * tags:
+ *   name: Message
+ *   description: API para gerenciamento das mensagens.
+ */
 
 
 /**
  * @swagger
- * /api/correio-elegante:
+ * /api/correio-elegante/message:
  *   get:
- *     summary: Obtém todos os correios elegantes.
+ *     summary: Obtém todos as mensagens.
+ *     tags: [Message]
  *     responses:
  *       '200':
  *         description: OK
  *       '500':
  *         description: Erro interno do servidor
  */
- router.get('/', correioController.selectAll);
+ router.get('/', MessageController.selectAll);
+
+
+ /**
+ * @swagger
+ * /api/correio-elegante/message/no-active:
+ *   get:
+ *     summary: Obtém todos as mensagens não ativados.
+ *     tags: [Message]
+ *     responses:
+ *       '200':
+ *         description: OK
+ *       '500':
+ *         description: Erro interno do servidor
+ */
+  router.get('/no-active', MessageController.selecAllNotActive);
 
 
 /**
  * @swagger
- * /api/correio-elegante:
+ * /api/correio-elegante/message:
  *   post:
- *     summary: Insere um novo correio elegante.
+ *     summary: Insere um nova menssagem.
+ *     tags: [Message]
  *     requestBody:
- *       description: Dados do correio elegante a ser inserido.
+ *       description: Dados da menssagem a ser inserido.
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
  *             properties:
- *               user_id:
+ *               usuario_id:
  *                 type: integer
- *                 description: ID do usuário.
+ *                 description: ID do usuario
  *               content:
  *                 type: string
- *                 description: Conteúdo do correio elegante.
+ *                 description: Conteúdo da menssagem.
  *               status:
  *                 type: string
- *                 description: Status do correio elegante.
+ *                 description: Status da menssagem.
  *               created_at:
  *                 type: string
  *                 format: date-time
- *                 description: Data de criação do correio elegante.
+ *                 description: Data de criação da menssagem.
  *               nome_destinatario:
  *                 type: string
  *                 description: Nome do destinatário.
@@ -56,48 +79,40 @@ const correioController = new CorreioController();
  *                 description: Curso escolhido.
  *               periodo:
  *                 type: string
- *                 description: Período do correio elegante.
+ *                 description: Período da menssagem.
  *               dica:
  *                 type: string
- *                 description: Dica do correio elegante.
- *               cor_bilhete:
- *                 type: string
- *                 description: Cor do bilhete.
- *               forma_cartinha:
- *                 type: string
- *                 description: Forma de envio do correio elegante.
- *               forma_pagamento:
- *                 type: string
- *                 description: Forma de pagamento do correio elegante.
+ *                 description: Dica da menssagem.
  *             example:
- *               user_id: 1
- *               content: "Conteúdo do correio elegante."
+ *               usuario_id: 1
+ *               content: "Conteúdo da menssagem."
  *               status: "ativo"
  *               created_at: "2023-07-31T23:34:40.000Z"
  *               nome_destinatario: "Nome do destinatário"
- *               serie_escolhida: 0
+ *               serie_escolhida: 3
  *               curso_escolhido: "Curso escolhido"
- *               periodo: "Período do correio elegante"
- *               dica: "Dica do correio elegante"
+ *               periodo: "Período da menssagem"
+ *               dica: "Dica da menssagem"
  *               cor_bilhete: "Cor do bilhete"
- *               forma_cartinha: "Forma de envio do correio elegante"
- *               forma_pagamento: "Forma de pagamento do correio elegante"
+ *               forma_cartinha: "Forma de envio da menssagem"
+ *               forma_pagamento: "Forma de pagamento da menssagem"
  *     responses:
  *       '200':
  *         description: OK
  *       '500':
  *         description: Erro interno do servidor
  */
-router.post('/', correioController.insertData);
+router.post('/', MessageController.insertData);
 
 
 /**
  * @swagger
- * /api/correio-elegante:
+ * /api/correio-elegante/message:
  *   put:
- *     summary: Atualiza um correio elegante pelo ID.
+ *     summary: Atualiza ua menssagem pelo ID.
+ *     tags: [Message]
  *     requestBody:
- *       description: Dados do correio elegante a serem atualizados.
+ *       description: Dados da menssagem a serem atualizados.
  *       required: true
  *       content:
  *         application/json:
@@ -106,31 +121,31 @@ router.post('/', correioController.insertData);
  *             properties:
  *               message_id:
  *                 type: integer
- *                 description: ID do correio elegante a ser atualizado.
+ *                 description: ID da menssagem a ser atualizado.
  *               nome_destinatario:
  *                 type: string
- *                 description: Nome do destinatário do correio elegante.
+ *                 description: Nome do destinatário da menssagem.
  *               serie_escolhida:
  *                 type: string
- *                 description: Série escolhida do correio elegante.
+ *                 description: Série escolhida da menssagem.
  *               curso_escolhido:
  *                 type: string
- *                 description: Curso escolhido do correio elegante.
+ *                 description: Curso escolhido da menssagem.
  *               periodo:
  *                 type: string
- *                 description: Período do correio elegante.
+ *                 description: Período da menssagem.
  *               dica:
  *                 type: string
- *                 description: Dica do correio elegante.
+ *                 description: Dica da menssagem.
  *               cor_bilhete:
  *                 type: string
- *                 description: Cor do bilhete do correio elegante.
+ *                 description: Cor do bilhete da menssagem.
  *               forma_cartinha:
  *                 type: string
- *                 description: Forma de envio da cartinha do correio elegante.
+ *                 description: Forma de envio da cartinha da menssagem.
  *               forma_pagamento:
  *                 type: string
- *                 description: Forma de pagamento do correio elegante.
+ *                 description: Forma de pagamento da menssagem.
  *             example:
  *               message_id: 2
  *               nome_destinatario: "Nome atualizado"
@@ -147,20 +162,21 @@ router.post('/', correioController.insertData);
  *       '500':
  *         description: Erro interno do servidor
  */
- router.put('/', correioController.updateData);
+ router.put('/', MessageController.updateData);
 
 
 
 /**
  * @swagger
- * /api/correio-elegante/{message_id}:
+ * /api/correio-elegante/message/{message_id}:
  *   delete:
- *     summary: Desativa um correio elegante pelo ID.
+ *     summary: Desativa ua menssagem pelo ID.
+ *     tags: [Message]
  *     parameters:
  *       - in: path
  *         name: message_id
  *         required: true
- *         description: ID do correio elegante a ser desativado.
+ *         description: ID da menssagem a ser desativado.
  *         schema:
  *           type: integer
  *     responses:
@@ -169,7 +185,7 @@ router.post('/', correioController.insertData);
  *       '500':
  *         description: Erro interno do servidor
  */
- router.delete('/:message_id', correioController.deleteData);
+ router.delete('/:message_id', MessageController.deleteData);
 
 
 module.exports = router;

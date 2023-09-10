@@ -2,7 +2,13 @@ const express = require('express')
 const router = express.Router();
 
 const UserController = require('../controllers/UserController');
-const userController = new UserController();
+
+/**
+ * @swagger
+ * tags:
+ *   name: User
+ *   description: API para gerenciamento de usuarios.
+ */
 
 
 /**
@@ -10,6 +16,7 @@ const userController = new UserController();
  * /api/correio-elegante/user:
  *   post:
  *     summary: Cria um novo usuário.
+ *     tags: [User]
  *     requestBody:
  *       description: Dados do usuário a serem inseridos.
  *       required: true
@@ -56,7 +63,7 @@ const userController = new UserController();
  *       '500':
  *         description: Erro interno do servidor.
  */
- router.post('/', userController.createUser);
+ router.post('/', UserController.createUser);
 
 
  /**
@@ -64,13 +71,14 @@ const userController = new UserController();
   * /api/correio-elegante/user:
   *   get:
   *     summary: Obtém todos os usuários.
+  *     tags: [User]
   *     responses:
   *       '200':
   *         description: OK.
   *       '500':
   *         description: Erro interno do servidor.
   */
- router.get('/', userController.getAllUsers);
+ router.get('/', UserController.getAllUsers);
  
 
  /**
@@ -78,6 +86,7 @@ const userController = new UserController();
   * /api/correio-elegante/user/{id}:
   *   get:
   *     summary: Obtém um usuário pelo ID.
+  *     tags: [User]
   *     parameters:
   *       - in: path
   *         name: id
@@ -93,7 +102,7 @@ const userController = new UserController();
   *       '500':
   *         description: Erro interno do servidor.
   */
- router.get('/:id', userController.getUserById);
+ router.get('/:id', UserController.getUserById);
 
  
  /**
@@ -101,6 +110,7 @@ const userController = new UserController();
   * /api/correio-elegante/user/{id}:
   *   put:
   *     summary: Atualiza um usuário pelo ID.
+  *     tags: [User]
   *     parameters:
   *       - in: path
   *         name: id
@@ -145,7 +155,7 @@ const userController = new UserController();
   *       '500':
   *         description: Erro interno do servidor.
   */
- router.put('/:id', userController.updateUser);
+ router.put('/:id', UserController.updateUser);
  
 
  /**
@@ -153,6 +163,7 @@ const userController = new UserController();
   * /api/correio-elegante/user/{id}:
   *   delete:
   *     summary: Exclui um usuário pelo ID.
+  *     tags: [User]
   *     parameters:
   *       - in: path
   *         name: id
@@ -168,7 +179,7 @@ const userController = new UserController();
   *       '500':
   *         description: Erro interno do servidor.
   */
- router.delete('/:id', userController.deleteUser);
+ router.delete('/:id', UserController.deleteUser);
  
 
 module.exports = router;
