@@ -22,16 +22,16 @@ console.log('====================================');
 db.getConnection((err, connection) => {
   if (err) {
     console.error('Erro ao obter conexão do pool:', err);
-    return res.status(500).json({ error: 'Erro interno do servidor' });
   }
 
-  connection.query(sql, (err, results) => {
+  connection.query(query, (err, results) => {
     connection.release(); 
     
     if (err) {
-      return res.status(500).json({ error: 'Erro interno do servidor' });
+      console.log('ERROR: ', err);
+       return;
     }
 
-    res.json(results);
+    console.log('FOI: ', results);
   });
 });

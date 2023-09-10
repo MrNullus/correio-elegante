@@ -1,6 +1,6 @@
 const db = require('../configs/database');
 
-class CorreioController {
+class MessageController {
   /**
    * Obtém todos os correios elegantes.
    * @param {object} req - Objeto de requisição.
@@ -23,6 +23,25 @@ class CorreioController {
     }
   }
 
+  async selecAllNotActive(req, res) {
+    try {
+      const query = "SELECT * FROM message WHERE status != 'ativo';"
+
+      db.query(query, ( err, results ) => {
+        if (err) {
+          console.log('====================================');
+          console.log('Erro ao executar a consulta: ', err);
+          console.log('====================================');
+        }
+
+        res.json(results);
+      });
+    } catch (error) {
+      console.error('Erro ao executar a consulta:', error);
+      res.status(500).json({ error: 'Erro interno do servidor' });
+    }
+  }
+
   /**
    * Insere um novo correio elegante.
    * @param {object} req - Objeto de requisição.
@@ -31,18 +50,18 @@ class CorreioController {
    */
   async insertData(req, res) {
     try {
-      const { user_id, content, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento } = req.body;
+      const { content, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica } = req.body;
       const created_at = new Date();
 
-      const query = 'INSERT INTO message (user_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-      const values = [user_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento];
+      const query = 'INSERT INTO message (usuario_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica, cor_bilhete, forma_cartinha, forma_pagamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+      const values = [usuario_id, content, created_at, nome_destinatario, serie_escolhida, curso_escolhido, periodo, dica];
 
       db.query(query, values, (err, result) => {
         if (err) {
           console.error('Erro ao executar a consulta:', err);
           return res.status(500).json({ error: values });
         }
-        res.json({ message: 'Dados inseridos com sucesso' });
+        res.json({ message: 'Dados inseridos com sucesso', res: result });
       });
     } catch (error) {
       console.error('Erro ao executar a consulta:', error);
@@ -106,6 +125,7 @@ class CorreioController {
       res.status(500).json({ error: 'Erro interno do servidor' });
     }
   }
+  
 }
 
-module.exports = CorreioController;
+module.exports = new MessageController();
