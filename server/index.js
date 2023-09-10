@@ -6,11 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const correioRoutes = require('./routes/correio');
+const messageRoutes = require('./routes/message');
 const userRoutes = require('./routes/user');
+const letterRoutes = require('./routes/letter');
 
-app.use('/api/correio-elegante', correioRoutes);
+app.use('/api/correio-elegante/message', messageRoutes);
 app.use('/api/correio-elegante/user', userRoutes);
+app.use('/api/correio-elegante/letters', letterRoutes);
 
 const swaggerSetup = require('./swagger');
 swaggerSetup(app);
