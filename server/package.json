@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
+    "db:init": "node database/schema.js", 
     "dev": "nodemon index.js",
     "test": "jest",
     "build": "npm run clean && babel src -d dist",

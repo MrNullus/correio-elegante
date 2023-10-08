@@ -2,6 +2,7 @@ const db = require('../configs/database');
 const Database = require('../utils/Database');
 
 const table_user = require('./tables/user');
+const table_letter = require('./tables/letter');
 const table_message = require('./tables/message');
 
 const procedure_get_message = require('./procedures/GetMessage');
@@ -12,7 +13,8 @@ let query = Database.prepareQuery([
   table_user,
   table_message,
   procedure_update_message_status, 
-  procedure_get_message 
+  procedure_get_message,
+  table_letter
 ]);
 
 console.log('====================================');
@@ -29,7 +31,7 @@ db.getConnection((err, connection) => {
     
     if (err) {
       console.log('ERROR: ', err);
-       return;
+      return;
     }
 
     console.log('FOI: ', results);
