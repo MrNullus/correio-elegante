@@ -13,8 +13,7 @@ const table_message = `
       periodo varchar(50) DEFAULT NULL,
       dica varchar(255) DEFAULT NULL,
       cor_bilhete varchar(7) DEFAULT NULL,
-      forma_cartinha varchar(50) DEFAULT NULL,
-      forma_pagamento varchar(50) DEFAULT NULL
+      forma_cartinha varchar(50) DEFAULT NULL
     );
 `;
 
