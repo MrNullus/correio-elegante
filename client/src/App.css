@@ -182,6 +182,11 @@ form .btn {
   width: 100%;
   height: 100%;
   padding: 0.3rem 0.3rem;
+  color: black;
+}
+
+option {
+  color: black!important;
 }
 
 .sr-only {
@@ -190,6 +195,7 @@ form .btn {
 
 .label {
   font-weight: 400;
+  color: black;
 }
 
 .input {

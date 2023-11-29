@@ -112,10 +112,11 @@ function FormCreateMensagem() {
             style={{
               width: "100px",
               marginTop: "0.6rem",
-              height: "32px"
+              height: "32px",
+              color: "black"
             }}
           >
-            <option value="Físico">Físico</option>
+            <option select value="Físico">Físico</option>
             <option value="Pix">Pix</option>
           </select>
         </div>
