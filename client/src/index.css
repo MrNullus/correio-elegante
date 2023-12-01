@@ -79,10 +79,11 @@ body {
 
 @media (max-width: 800px) {
   .text-logo {
-    font-size: 2rem!important;
+    font-size: 2.2rem!important;
+    padding: 0 1rem;
   }
   .image-logo {
-    width: 30px!important;
+    width: 45px!important;
   }
 }
 
