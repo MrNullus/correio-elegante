@@ -5,7 +5,7 @@ function FormCreateMensagem() {
 
   return (
       <center>
-   <div className="overflow">
+   <div className="overflow carta-container">
     <h2 className="title">Cartinha</h2>
 
     <div className="form form-mensagem-create">
@@ -110,12 +110,13 @@ function FormCreateMensagem() {
             name="forma_pagamento"
             id=""
             style={{
-              width: "100px",
+              width: "100%",
               marginTop: "0.6rem",
-              height: "32px"
+              height: "32px",
+              color: "black"
             }}
           >
-            <option value="Físico">Físico</option>
+            <option select value="Físico">Físico</option>
             <option value="Pix">Pix</option>
           </select>
         </div>
