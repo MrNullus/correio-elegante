@@ -1,0 +1,28 @@
+.hero-login {
+    background: black;
+    width: 65%;
+    height: 165px;
+    border-radius: 12pt;
+    margin-bottom: 3rem;
+    position: relative;
+    
+}
+
+.hero-login div {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: url('../../../assets/image/cupid-1.png');
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 84%;
+    border-radius: 12pt;
+}
+
+.btn-sigup {
+    background: white;
+    color: black;
+}

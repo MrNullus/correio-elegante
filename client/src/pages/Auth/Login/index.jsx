@@ -1,11 +1,25 @@
-import React from 'react';
-import Header from '../components/Header';
+import { useNavigate } from "react-router-dom";
+
+import Header from '../../../components/Header';
+import './style.css';
+
+
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <>
+
       <main>
         <Header />
+
+      <center>
+      <section className="hero-register">
+        <div>
+        </div>
+      </section>
+      </center>
 
         <center>
         <div className="overflow">
@@ -40,9 +54,20 @@ const Login = () => {
                   Entrar
                 </button>
               </center>
+              <center>
+                <button 
+                  onClick={(e) => {
+                    e.preventDefault(); 
+                    navigate('/auth/register');
+                  }} 
+                  className="btn btn-sigup"
+                >
+                  Cadastrar-se
+                </button>
+              </center>
             </form>
+            </div>
           </div>
-        </div>
         </center>
       </main>
     </>

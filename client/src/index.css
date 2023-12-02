@@ -77,9 +77,13 @@ body {
   line-height: 1.1;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   .text-logo {
-    font-size: 2.4rem;
+    font-size: 2.2rem!important;
+    padding: 0 1rem;
+  }
+  .image-logo {
+    width: 45px!important;
   }
 }
 

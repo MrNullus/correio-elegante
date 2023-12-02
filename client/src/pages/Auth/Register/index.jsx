@@ -1,17 +1,18 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
 import { useState } from 'react';
 
-import Header from '../components/Header';
+import Header from '../../../components/Header';
+import './style.css';
 
 
-const Login = () => {
+const Register = () => {
+  const navigate = useNavigate();
   const baseURLUsers = 'localhost:3000/api/correio-elegante/user';
 
   const [formValues, setFormValues] = useState({
-    firstname: '',
-    lastname: '',
+    name: '',
     nickname: '',
     email: '',
     password: '',
@@ -46,6 +47,14 @@ const Login = () => {
       <main>
         <Header />
 
+          
+      <center>
+      <section className="hero-register">
+        <div>
+        </div>
+      </section>
+      </center>
+
         <center>
         <div className="overflow">
 
@@ -55,26 +64,14 @@ const Login = () => {
             <form method='POST' onSubmit={handleSubmitForm}>
               <div className="form-field">
                 <input 
-                  type="text" 
-                  name="firstname"
-                  id="firstname"  
+                  type="email" 
+                  name="name"
+                  id="name"  
                   className='input'
-                  placeholder='Firstname'
+                  placeholder='Name'
                   onChange={handleChangeForm}
                 />
-                <label id='lblErroFirstname'></label>
-              </div>  
-
-              <div className="form-field">
-                <input 
-                  type="text" 
-                  name="lastname"
-                  id="lastname"  
-                  className='input'
-                  placeholder='Lastname'
-                  onChange={handleChangeForm}
-                />
-                <label id='lblErroLastname'></label>
+                <label id='lblErroName'></label>
               </div>  
 
               <div className="form-field">
@@ -113,9 +110,23 @@ const Login = () => {
                 <label id='lblErroSenha'></label>
               </div>  
 
+              <center>
               <button className="btn">
-                Entrar
+                Cadastrar-se
               </button>
+              </center>
+
+              <center>
+                <button 
+                  onClick={(e) => {
+                    e.preventDefault(); 
+                    navigate('/auth/login');
+                  }} 
+                  className="btn btn-login"
+                >
+                  Entrar
+                </button>
+              </center>
             </form>
           </div>
         </div>
@@ -125,4 +136,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
