@@ -5,6 +5,7 @@ import axios from 'axios';
 const Dashboard = () => {
     const [listMessage, setListMessage] = useState([]);
 
+  /*
     useEffect(() => {
         axios
             .get('http://localhost:3000/api/correio-elegante')
@@ -20,6 +21,7 @@ const Dashboard = () => {
                 console.log(error);
             });
     }, []);
+  */
 
     console.log(listMessage);
 

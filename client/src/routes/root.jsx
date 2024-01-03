@@ -7,7 +7,7 @@ import {
 import Home from "../pages/Home";
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
-import Dashboard from "../pages/user/Dashboard";
+import Dashboard from "../pages/Admin/Dashboard";
 
 const Router = createBrowserRouter([
   {
@@ -22,9 +22,10 @@ const Router = createBrowserRouter([
     path: "/auth/register",
     element: <Register />,
   },
+  
   {
-      path: "user/dashboard",
-      element: <Dashboard />
+    path: "/admin/dashboard",
+    element: <Dashboard />
   }
 ]);
 
