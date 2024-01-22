@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from '../../../components/Header';
 
 
 const Dashboard = () => {
@@ -27,6 +28,8 @@ const Dashboard = () => {
 
     return (
         <div className="wrapper">
+          <Header />
+
             <aside className="sidebar">
                 <button className="btn-toggle-sidebar">
                     X
