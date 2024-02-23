@@ -74,9 +74,9 @@
   color: #888;
 }
 
-.form-mensagem-create .form-field { 
+.form-mensagem-create .form-field {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   text-align: left;
   margin-bottom: 2rem;
 }
@@ -144,11 +144,11 @@ option {
     padding: 0.28rem;
     padding-bottom: 1rem;
   }
-  
+
   .overflow .carta-container form {
     width: 100%;
   }
-  
+
   .image-logo {
     width: 40px;
     object-fit: center;
@@ -160,3 +160,4 @@ option {
   animation: openLetter 1s ease-in-out both;
   transform: translateY(-100%);
 }
+
