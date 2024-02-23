@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     return (
         <div className="wrapper">
-          <Header />
+          <Header type="admin" />
 
             <aside className="sidebar">
                 <button className="btn-toggle-sidebar">

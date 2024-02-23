@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import ImageLogo from "../../assets/image/logo-nobg.png"; 
 
 import { MdAdminPanelSettings } from 'react-icons/md';
@@ -6,6 +8,12 @@ import { CiMenuKebab } from "react-icons/ci";
 import './style.css'; 
 
 function Header({ type }) {
+  const [showMenu, setShowMenu] = useState(false)
+
+  const handleShowMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <header className={`header header-${type}`}> 
       <div className='container-image-logo'>
@@ -27,25 +35,37 @@ function Header({ type }) {
             <MdAdminPanelSettings />
           </a>)
             :
-          (<button className='btn btn-menu'>
-            #
-          </button>)
+          (
+            <button 
+              className='btn btn-menu'
+              onClick={handleShowMenu}
+            >
+              ☰
+            </button>
+          )
         }
       </div>
       
-      <menu>
-        <item className='btn-close'>
+      { showMenu && (
+        <menu>
+          <item 
+            className='btn-close'
+            onClick={handleShowMenu}
+          >
             X
-        </item>
-        <item>
-          <a href='/home'>
-            Home
-          </a>
-        </item>
-        <item>
-          Home
-        </item>
-      </menu>
+          </item>
+          <item>
+            <a href='/home'>
+              Home
+            </a>
+          </item>
+          <item>
+            <a href='/home'>
+              Home
+            </a>
+          </item>
+        </menu>
+      )}
     </header>
   );
 }
