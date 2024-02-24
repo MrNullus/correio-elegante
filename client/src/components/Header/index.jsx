@@ -46,7 +46,7 @@ function Header({ type }) {
         }
       </div>
       
-      { showMenu && (
+      { (showMenu && type === 'admin') && (
         <menu>
           <item 
             className='btn-close'
@@ -55,12 +55,7 @@ function Header({ type }) {
             X
           </item>
           <item>
-            <a href='/home'>
-              Home
-            </a>
-          </item>
-          <item>
-            <a href='/home'>
+            <a href='/dashboard'>
               Home
             </a>
           </item>

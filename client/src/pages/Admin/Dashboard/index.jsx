@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../../../components/Header';
 
+import './style.css';
 
 const Dashboard = () => {
     const [listMessage, setListMessage] = useState([]);
@@ -30,21 +31,6 @@ const Dashboard = () => {
         <div className="wrapper">
           <Header type="admin" />
 
-            <aside className="sidebar">
-                <button className="btn-toggle-sidebar">
-                    X
-                </button>
-
-                <ul className="sidebar-list-links">
-                    <li className="item-link">
-                        <a href="">Home</a>
-                    </li>
-                    <li className="item-link">
-                        <a href="">Pedidos</a>
-                    </li>
-                </ul>
-            </aside>
-
             <main className="dashboard">
                 <section className="dash-content">
                     <div className="boxes">
@@ -53,7 +39,7 @@ const Dashboard = () => {
                                 Quantidade de Pedidos
                             </span>
 
-                            12
+                          <p>12</p>
                         </article>
 
                         <article className="box">
@@ -61,7 +47,7 @@ const Dashboard = () => {
                                 Lucro
                             </span>
 
-                            R$ 54, 00
+                          <p>R$ 54, 00</p>
                         </article>
 
                         <article className="box">
@@ -69,7 +55,7 @@ const Dashboard = () => {
                                 Gastos
                             </span>
 
-                            R$ 67, 00
+                          <p>R$ 67, 00</p>
                         </article>
                     </div>
                 </section>

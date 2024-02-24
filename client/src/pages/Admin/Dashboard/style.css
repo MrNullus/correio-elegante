@@ -1,0 +1,87 @@
+
+.header {
+  background-color: rgba(244,244,244,0.6);
+  box-shadow: 
+    0px 0px 0px 1px rgba(204,200,204,0.4);
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sidebar-list-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-list-links li {
+  margin-bottom: 1rem;
+}
+
+.sidebar-list-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main Content */
+.main {
+  margin-left: 250px; /* Deslocar para a direita após a sidebar */
+  padding: 2rem;
+}
+
+/* Seções de Conteúdo */
+.dash-content {
+  margin-bottom: 2rem;
+}
+
+.dash-content__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dash-content__subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: red;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box__title {
+  padding: 1rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.98rem;
+}
+
+.box p {
+  padding: 12px;
+  color: white;
+}
+
+/* Linha Separadora */
+.separator {
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  border-radius: 12pt;
+  margin: 2rem 0;
+}
+
