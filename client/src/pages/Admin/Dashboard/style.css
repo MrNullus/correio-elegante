@@ -58,7 +58,6 @@
 .box {
   display: flex;
   flex-flow: column wrap;
-  background-color: red;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -73,6 +72,16 @@
   font-size: 0.98rem;
 }
 
+.box-alert {
+  background-color: #f72323da;
+}
+.box-success {
+  background-color: #23f73bcb;
+}
+.box-warning {
+  background-color: #f7f023cb;
+}
+
 .box p {
   padding: 12px;
   color: white;
@@ -80,7 +89,7 @@
 
 /* Linha Separadora */
 .separator {
-  border-bottom: 1px solid rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.885);
   border-radius: 12pt;
   margin: 2rem 0;
 }

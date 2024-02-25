@@ -78,7 +78,7 @@
 }
 
 
-/*
+
 @media only screen and (min-width: 760px) {
  .header menu { 
    position: absolute;
@@ -115,7 +115,7 @@
    width: 60px;
  }
 }
-*/
+
 
 .header menu item a {
   color: white!important;

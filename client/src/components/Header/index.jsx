@@ -1,26 +1,32 @@
-import { useState } from "react";
+import {
+  useState
+} from "react";
 
-import ImageLogo from "../../assets/image/logo-nobg.png"; 
+import ImageLogo from "../../assets/image/logo-nobg.png";
+import './style.css';
 
-import { MdAdminPanelSettings } from 'react-icons/md';
-import { CiMenuKebab } from "react-icons/ci";
+import {
+  MdAdminPanelSettings
+} from 'react-icons/md';
+import {
+  CiMenuKebab
+} from "react-icons/ci";
 
-import './style.css'; 
 
 function Header({ type }) {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu,setShowMenu] = useState(false)
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <header className={`header header-${type}`}> 
+    <header className={`header header-${type}`}>
       <div className='container-image-logo'>
-        <img 
+        <img
           className='header__image-logo image-logo logo'
           alt='Correio Elegante'
-          src={ ImageLogo  }
+          src={ ImageLogo }
         />
       </div>
 
@@ -30,28 +36,26 @@ function Header({ type }) {
 
       <div className='header__icon-action'>
         {
-          type === 'guest'?
-          (<a href="/auth/login" style={{ color: 'rgb(253,40,104)' }}>
+      type === 'guest'?
+      (<a href="/auth/login" style={ { color: 'rgb(253,40,104)' }}>
             <MdAdminPanelSettings />
-          </a>)
-            :
-          (
-            <button 
-              className='btn btn-menu'
-              onClick={handleShowMenu}
-            >
+          </a>):
+      (
+        <button
+          className='btn btn-menu'
+          onClick={handleShowMenu}
+          >
               ☰
             </button>
-          )
-        }
-      </div>
-      
+      )
+      }
+    </div>
       { (showMenu && type === 'admin') && (
-        <menu>
-          <item 
-            className='btn-close'
-            onClick={handleShowMenu}
-          >
+      <menu>
+          <item
+        className='btn-close'
+        onClick={handleShowMenu}
+        >
             X
           </item>
           <item>
@@ -59,10 +63,10 @@ function Header({ type }) {
               Home
             </a>
           </item>
-        </menu>
-      )}
-    </header>
-  );
+      </menu>
+    )}
+  </header>
+);
 }
 
 export default Header;
