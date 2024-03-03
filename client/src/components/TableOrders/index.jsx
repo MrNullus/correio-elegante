@@ -1,22 +1,18 @@
 import { useState, useEffect } from 'react';
 
+import { actionRecentOrders } from './actions/recentOrders';
+import { handleSearchOrder } from './handles/searchOrder.jsx';
+
+import './style.css';
 
 function TableOrders() {
   const [ orders, setOrders ] = useState([]);
   
-  
+
   useEffect(() => {
-    function actionRecentOrders() {
-      const order = {
-          uid    : "11A30B1",
-          type   : "Cartinha Comun"
-      };
-      
-      setOrders([...orders, order]);
-    }
-    
     actionRecentOrders();
   }, []);
+  
   
   return (
     <div className="box-table">
@@ -25,29 +21,54 @@ function TableOrders() {
         
         <menu>
           <item>
+            <i 
+              class="fas fa-search" 
+              style={{ color: "#ffffff" }}></i>
+          
+            <input 
+              type="search" 
+              name="searchOrder" 
+              id="searchOrder"
+              placeholder="Digite o UID"
+              onChange={({ target }) => handleSearchOrder(target.value)}
+            />
+          </item>
+          
+          <item>
             <select name="selectNumberRows" id="selectNumberRows">
               <option value="10">10</option>
               <option value="30">30</option>
               <option value="50">50</option>
             </select>
           </item>
-          
-          <item>
-            <input 
-              type="search" 
-              name="searchOrder" 
-              id="searchOrder"
-              placeholder="O que proucura?"
-            />
-          </item>
         </menu>
       </header>
       
-      <table cellpadding="12px" cellspacing="2px">
+      <table cellspacing="3px">
         <thead>
           <tr>
-            <th>UID</th>
-            <th>Tipo</th>
+            <th style={{ 
+              border : '1px solid black',
+              borderRight: '1px solid',
+              color  : 'white',
+              background : 'black'
+            }}>
+              UID
+            </th>
+            
+            <th style={{ 
+              border : '1px solid black', 
+              color  : 'white',
+              background : 'black'
+            }}>
+              Tipo
+            </th>
+            
+            <th style={{ 
+              border : '1px solid white', 
+              color  : 'white',
+              background : 'white'
+            }}></th>
           </tr>
         </thead>
         
@@ -55,19 +76,23 @@ function TableOrders() {
         {
           orders.map(({ uid, type }) => (
             <tr>
-              <td>{ uid }</td>
+              <td><strong>{ uid }</strong></td>
               <td>{ type }</td>
               
               <th colspan="5">
-                <button>
+                <button 
+                  onClick={() => alert("Ver mais porra")} 
+                >
                   <i 
                     class="fa-solid fa-eye" 
                     style={{ color: "#ff0055" }}></i>
                 </button>
                 
-                <hr className="separator"/>
+                <hr className="separator" color="white"/>
                 
-                <button>
+                <button
+                  onClick={() => alert("Tá pago")} 
+                >
                   <i 
                     class="fa-solid fa-envelope-circle-check" 
                     style={{ color: "#63E6BE" }}></i>
