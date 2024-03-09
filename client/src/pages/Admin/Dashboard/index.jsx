@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 //import axios from 'axios';
 import Header from '../../../components/Header';
 import { TableOrders } from '../../../components/TableOrders';
+import { SectionOrderStatistics } from '../../../components/SectionOrderStatistics/';
 
 import './style.css';
 
@@ -52,35 +53,7 @@ const Dashboard = () => {
 
           <hr className="separator" />
 
-          <section className="dash-estatistics">
-            <h2 className="dash-content__title">
-              Estátisticas
-            </h2>
-
-            <article>
-              <div>
-                <h3 className="dash-content__subtitle">
-                  Gastos por més
-                </h3>
-
-                <div>
-                  Chart
-                </div>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3 className="dash-content__subtitle">
-                  Gastos por més
-                </h3>
-
-                <div>
-                  Chart
-                </div>
-              </div>
-            </article>
-          </section>
+          <SectionOrderStatistics />
         </main>
       </div>
 

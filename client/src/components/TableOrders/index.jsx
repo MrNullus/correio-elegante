@@ -8,9 +8,9 @@ import './style.css';
 function TableOrders() {
   const [ orders, setOrders ] = useState([]);
   
-
+  
   useEffect(() => {
-    actionRecentOrders();
+    actionRecentOrders(orders, setOrders);
   }, []);
   
   
@@ -30,7 +30,7 @@ function TableOrders() {
               name="searchOrder" 
               id="searchOrder"
               placeholder="Digite o UID"
-              onChange={({ target }) => handleSearchOrder(target.value)}
+              onChange={({ target }) => handleSearchOrder(target.value, orders, setOrders)}
             />
           </item>
           

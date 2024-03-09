@@ -1,7 +1,7 @@
-const handleSearchOrder = (searchTerm) => {
+const handleSearchOrder = (searchTerm, orders, setOrders) => {
   // 1. Check for empty search term:
   if (!searchTerm) {
-    return orders; 
+    setOrders(orders); 
   }
 
   // 2. Perform case-insensitive filtering:
