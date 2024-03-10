@@ -74,8 +74,8 @@ function TableOrders() {
         
         <tbody>
         {
-          orders.map(({ uid, type }) => (
-            <tr>
+          orders.map(({ uid, type }, index) => (
+            <tr key={index}>
               <td><strong>{ uid }</strong></td>
               <td>{ type }</td>
               

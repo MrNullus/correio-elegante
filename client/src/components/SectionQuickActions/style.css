@@ -1,0 +1,53 @@
+.dash-actions .boxes {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.dash-actions .box {
+  max-width: 33.333%;
+  font-size: 0.9rem;
+  background: black;
+  padding: 0.67rem;
+  
+}
+
+.dash-actions .box i {
+  font-size: 1.2rem;
+  padding: 0.55rem 0; 
+  border-radius: 2pt;
+}
+
+.dash-actions .box span {
+  padding: 0.45rem; 
+  color: black;
+  font-size: 0.46rem;
+  font-weight: 500;
+  background: white;
+  border-radius: 2pt;
+}
+
+
+.dash-actions .box i.fa-comments {
+  color: #4ccceb;
+}
+.dash-actions .box i.fa-archive {
+  color: #de6320;
+}
+.dash-actions .box i.fa-archive-out {
+  color: #de2020;
+}
+.dash-actions .box i.fa-pencil {
+  color: #efd848;
+}
+.dash-actions .box i.fa-comments {
+  color: #4ccceb;
+}
+.dash-actions .box i.fa-inbox {
+  color: #bd40ff;
+}
+.dash-actions .box i.fa-cash-register {
+  color: #4ceb94;
+}
+.dash-actions .box i.fa-envelope {
+  color: #eb4c8f;
+}

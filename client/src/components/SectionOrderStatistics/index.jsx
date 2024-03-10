@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
-
+import './style.css';
 
 const SectionOrderStatistics = () => {
   
@@ -106,28 +106,27 @@ const SectionOrderStatistics = () => {
           </sumary>
           
           <Chart
-            chartType="PieChart"
+            chartType="AreaChart"
+            width="100%"
+            height="400px"
             data={
               [
-                ['Categoria', 'Valor (R$)'],
-                ['Ganhos', 20],
-                ['Gastos', 15],
+                ["Year", "Sales", "Expenses"],
+                ["2013", 1000, 400],
+                ["2014", 1170, 460],
+                ["2015", 660, 1120],
+                ["2016", 1030, 540],
               ]
             }
-            width="400px"
-            height="300px"
-            options={{
-              title: 'Comparação de Ganhos e Gastos',
-              legend: { position: 'bottom' },
-              pieHole: 0.4,
-              slices: [
-                { color: '#008000' }, // Ganhos (green)
-                { color: '#FF0000' }, // Gastos (red)
-              ],
-              is3D: true,
-            }}
+            options={
+              {
+                title: "Correios mais Vendidos",
+                hAxis: { title: "Trimestre", titleTextStyle: { color: "#333" } },
+                vAxis: { minValue: 0 },
+                chartArea: { width: "50%", height: "70%" },
+              }
+            }
           />
-
         </details>
       </article>
     </section>

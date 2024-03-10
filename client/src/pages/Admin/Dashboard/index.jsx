@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 //import axios from 'axios';
+
 import Header from '../../../components/Header';
 import { TableOrders } from '../../../components/TableOrders';
 import { SectionOrderStatistics } from '../../../components/SectionOrderStatistics/';
+import { SectionQuickActions } from '../../../components/SectionQuickActions/'
 
 import './style.css';
+
+//TODO: Renomear SectionOrderStatistics para SectionPreviewOrderStatistics  
 
 const Dashboard = () => {
 
@@ -53,6 +57,10 @@ const Dashboard = () => {
 
           <hr className="separator" />
 
+          <SectionQuickActions />
+          
+          <hr className="separator" />
+        
           <SectionOrderStatistics />
         </main>
       </div>
