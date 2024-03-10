@@ -59,7 +59,7 @@ function Header({ type }) {
             X
           </item>
           <item>
-            <a href='/dashboard'>
+            <a href='/admin/dashboard'>
               Home
             </a>
           </item>
