@@ -11,6 +11,7 @@ import Login from "../pages/Auth/Login";
 import Dashboard from "../pages/Admin/Dashboard";
 
 import LetterShow from "../pages/Admin/Letters/Show/";
+import LetterPayOff from "../pages/Admin/Letters/PayOff/";
 
 const Router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const Router = createBrowserRouter([
   {
     path: "/admin/letters/show/:uid",
     element: <LetterShow/>,
+  },
+  {
+    path: "/admin/letters/payoff/:uid",
+    element: <LetterPayOff/>,
   },
 ]);
 
