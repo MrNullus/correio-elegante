@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from "react-router-dom";
 import { actionRecentOrders } from './actions/recentOrders';
 import { handleSearchOrder } from './handles/searchOrder.jsx';
 
 import './style.css';
 
 function TableOrders() {
+  const navigator = useNavigate();
   const [ orders, setOrders ] = useState([]);
   
   
@@ -81,7 +83,7 @@ function TableOrders() {
               
               <th colspan="5">
                 <button 
-                  onClick={() => alert("Ver mais porra")} 
+                  onClick={() => navigator(`/admin/letters/show/${uid}`)} 
                 >
                   <i 
                     class="fa-solid fa-eye" 
@@ -91,7 +93,7 @@ function TableOrders() {
                 <hr className="separator" color="white"/>
                 
                 <button
-                  onClick={() => alert("Tá pago")} 
+                  onClick={() => navigator(`/admin/letters/payoff/${uid}`)} 
                 >
                   <i 
                     class="fa-solid fa-envelope-circle-check" 

@@ -7,7 +7,10 @@ import {
 import Home from "../pages/Home";
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
+
 import Dashboard from "../pages/Admin/Dashboard";
+
+import LetterShow from "../pages/Admin/Letters/Show/";
 
 const Router = createBrowserRouter([
   {
@@ -26,7 +29,12 @@ const Router = createBrowserRouter([
   {
     path: "/admin/dashboard",
     element: <Dashboard />
-  }
+  },
+  
+  {
+    path: "/admin/letters/show/:uid",
+    element: <LetterShow/>,
+  },
 ]);
 
 export default Router;
