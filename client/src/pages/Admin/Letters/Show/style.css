@@ -1,0 +1,171 @@
+.envelope {
+  background: url(../../../../assets/image/envelope-paper.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  margin-bottom: 3rem;
+  display: flex;
+  place-items: center;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+
+.envelope .title{ 
+  margin-bottom: 2.6rem;
+}
+
+.envelope .title enfase {
+  color: black; 
+  font-size: 1.5rem;
+}
+
+
+.envelope-content {
+  width: 300px;
+  box-shadow: 0 1px 5px #ccc;
+  height: auto;
+  margin-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  position: relative;
+  border-radius: 6pt;
+  font-size: 12px;
+  background: #ffffffdc;
+}
+
+.animate-envelope-toggle {
+  animation: close-envelope linear forwards;
+  animation-delay: 0.26s;
+}
+
+
+@keyframes close-envelope {
+  from {
+    height: initial;
+  }
+  to {
+    height: 10px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+
+
+.letter-details {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.letter-details article {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.letter-details article div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;;
+  border: 1px groove black;
+  border-radius: 3pt;
+  padding: 0.3rem;
+  background-color: white;
+}
+
+.box-message .subtitle  {
+  margin-bottom: 0.7rem;
+}
+
+.letter-details article h3.subtitle {
+  padding: 0.3rem;
+  margin: 0;
+  background: #eaa12dc9;
+  color: #fff;
+  white-space:pre-line;
+  border-radius: 3pt;
+}
+
+.letter-details article div h4.subtitle { 
+  padding: 0.3rem;
+  margin: 0;
+  background: black;
+  color: white;
+  border-radius: 3pt;
+}
+
+.letter-details article div span {
+  letter-spacing: 1.2pt;
+  text-align: center!important;
+  background: white;
+  padding: 0.3rem;
+  border-radius: 3pt;
+}
+
+.box-status-payment span {
+  background: black;
+  padding: 0.3rem;
+  margin: 0;
+  border-radius: 3pt;
+  color: white;
+}
+
+.box-info-course {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.56rem;
+}
+
+.box-name-recipient,
+.box-description-style,
+.box-tips {
+  flex-flow: column nowrap!important;
+  gap: 0.56rem;
+}
+
+.box-name-recipient span {
+  font-family: var(--font-family-logo);
+}
+
+.box-name-recipient h4 {
+  width: 130px;
+}
+
+.box-tips h4 {
+  width: 50px;
+}
+
+.box-description-style h4 {
+  width: 80px;
+}
+
+.box-description-style span { 
+  font-family: var(--font-family-logo);
+  text-align: center;
+}
+
+.box-message span {
+  padding: 1.2rem!important;
+  font-family: var(--font-family-logo);
+}
+
+.box-message span,
+.box-name-recipient span,
+.box-description-style span,
+.box-tips span {
+  font-family: var(--font-family-logo);
+  font-size: 0.9rem;
+}
+
+.btn-handle-envelope {
+  border-radius: 6pt;
+  background: #ffffff77;
+  font-size: 1.2rem!important;
+  border: 0.8px solid #000000bd!important;
+}
