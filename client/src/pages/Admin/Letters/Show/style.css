@@ -22,7 +22,7 @@
 
 
 .envelope-content {
-  width: 300px;
+  width: 100%;
   box-shadow: 0 1px 5px #ccc;
   height: auto;
   margin-bottom: 4rem;
@@ -168,4 +168,18 @@
   background: #ffffff77;
   font-size: 1.2rem!important;
   border: 0.8px solid #000000bd!important;
+}
+.btn-handle-envelope:hover {
+  background: #ffffff77!important;
+  border: 0.8px solid #000000bd!important;
+}
+
+.box-btns-actions {  
+  padding: 0 0.5rem;
+}
+
+.box-btn-edit {
+  padding: 0!important;
+  justify-content: flex-end!important;
+  border: none!important;
 }

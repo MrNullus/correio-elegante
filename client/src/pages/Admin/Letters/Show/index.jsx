@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 //import axios from 'axios';
 
 import Header from '../../../../components/Header/';
+
+import '../../../../App.css';
 import './style.css';
 
 //TODO: Fazer a tela
@@ -9,7 +11,7 @@ import './style.css';
 const Show = () => {
     const [letter, setLetter] = useState({
       // head informations
-      id: 0,
+      id: 1,
       uid: window.location.pathname.split('/')[4],
       created_at: "12/06/2024",
       updated_at: "12/06/2024",
@@ -98,6 +100,10 @@ const Show = () => {
                 </span>
               </div>
               
+              <div className="box-btn-edit">
+                <button className="btn-warning">Editar</button>
+              </div>
+              
               <div>
                 <h4 className="subtitle">
                   Preço
@@ -122,6 +128,10 @@ const Show = () => {
             
             <article class="letter-details__style">
               <h3 className="subtitle">Detalhes do Estilo</h3>
+              
+              <div className="box-btn-edit">
+                <button className="btn-warning">Editar</button>
+              </div>
               
               <div>
                 <h4 className="subtitle">
@@ -172,6 +182,10 @@ const Show = () => {
             <article class="letter-details__recipient">
               <h3 className="subtitle">Detalhes do Recebedor</h3>
               
+              <div className="box-btn-edit">
+                <button className="btn-warning">Editar</button>
+              </div>
+              
               <div className="box-name-recipient">
                 <h4 className="subtitle">
                   Nome Completo
@@ -214,6 +228,10 @@ const Show = () => {
             <article class="letter-details__body">
               <h3 className="subtitle">Corpo</h3>
               
+              <div className="box-btn-edit">
+                <button className="btn-warning">Editar</button>
+              </div>
+              
               <div className="box-message">
                 <h4 className="subtitle">
                   Mensagem
@@ -238,7 +256,23 @@ const Show = () => {
                 )
               }
             </article>
-           </section>
+        
+            <hr className="separator" color="black"/>
+              
+            <div className="box-btns-actions">
+              <button
+                className="btn btn-alert"
+                onClick={() => {
+                  if(confirm("Deseja realmente excluir?")) {
+                    return navigator(`/admin/letters/payoff/${uid}`);
+                  }
+                }} 
+              >
+                  Deletar
+              </button>
+
+            </div>
+          </section>
           </div>
           
           <div>
