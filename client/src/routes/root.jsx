@@ -10,14 +10,19 @@ import Login from "../pages/Auth/Login";
 
 import Dashboard from "../pages/Admin/Dashboard";
 
-import LetterShow from "../pages/Admin/Letters/Show/";
-import LetterPayOff from "../pages/Admin/Letters/PayOff/";
+import { Letter } from "./Letter/";
 
-const Router = createBrowserRouter([
+import TypeLetterCreate from "../pages/Admin/TypeLetter/Create/";
+
+
+const TypeLetter = [
   {
-    path: "/",
-    element: <Home />,
+    path: '/admin/type-letter/create', 
+    element: <TypeLetterCreate />
   },
+];
+
+const Auth = [
   {
     path: "/auth/login",
     element: <Login />,
@@ -25,21 +30,26 @@ const Router = createBrowserRouter([
   {
     path: "/auth/register",
     element: <Register />,
+  },  
+];
+
+
+const Router = createBrowserRouter([
+  { 
+    path: "/",
+    element: <Home />,
   },
   
+  // ~@> AUTH
+  ...Auth,
+  
+  // ~@> ADMIN
   {
     path: "/admin/dashboard",
     element: <Dashboard />
   },
-  
-  {
-    path: "/admin/letters/show/:uid",
-    element: <LetterShow/>,
-  },
-  {
-    path: "/admin/letters/payoff/:uid",
-    element: <LetterPayOff/>,
-  },
+  ...TypeLetter,
+  ...Letter,
 ]);
 
 export default Router;
