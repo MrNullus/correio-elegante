@@ -71,9 +71,6 @@ a:hover {
 }
 
 
-.input::placeholder {
-  color: aliceblue;
-}
 
 
 
@@ -128,10 +125,10 @@ button:focus-visible {
   border: 3px solid rgb(0, 0, 0);
 }
 .btn:hover {
-  background-color: white;
+  background-color: black;
   transition: .36s all;
-  border: 3px solid rgb(238, 6, 122);
-  color: black;
+  border-color: rgb(238, 6, 122);
+  color: white;
 }
 
 .btn-sigup {
@@ -139,6 +136,44 @@ button:focus-visible {
     color: black;
 }
 
+.btn-alert,
+.btn-success,
+.btn-warning {
+  border: none;
+}
+
+.btn-alert:hover,
+.btn-success:hover,
+.btn-warning:hover {
+  background-color: initial;
+  border: none;
+}
+
+.btn-alert:hover {
+  background-color: #f72323da;
+  color: white;
+}
+.btn-succes:hover {
+  background-color: #23f73bcb;
+  color: white;
+}
+.btn-warning:hover {
+  background-color: #fbc014bd;
+  color: black;
+}
+
+.btn-alert {
+  background-color: #f72323da;
+  color: white;
+}
+.btn-success {
+  background-color: #23f73bcb;
+  color: white;
+}
+.btn-warning {
+  background-color: #fbc014bd;
+  color: black;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -199,11 +234,14 @@ option {
   padding: 16px 6px;
   text-indent: 6pt;
   border-radius: 3px;
+  border: 1px solid #000000d2;
   width: 95%;
-  background-color: black;
-  color: aliceblue;
+  background-color: transparent;
+  color: #000000e9;
 }
-
+.input::placeholder {
+  color: #000000e9;
+}
 
 /*  HEADER */
 .image-logo {
@@ -232,6 +270,65 @@ option {
 }
 
 
+/* Seções de Conteúdo */
+.dash-content {
+  margin-bottom: 2rem;
+}
 
-/* ANIMATIONS */
+.dash-content__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dash-content__subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box__title {
+  padding: 1rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.98rem;
+}
+
+.box-alert {
+  background-color: #f72323da;
+}
+.box-success {
+  background-color: #23f73bcb;
+}
+.box-warning {
+  background-color: #f7f023cb;
+}
+
+.box p {
+  padding: 12px;
+  color: white;
+}
+
+/* Linha Separadora */
+.separator {
+  background: rgba(0,0,0,0.885);
+  border-radius: 12pt;
+  margin: 2rem 0;
+}
 
