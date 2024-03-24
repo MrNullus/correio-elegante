@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import Header from '../../../../components/Header/';
 
-import '../../../../App.css';
+import '../../../../index.css';
 import './style.css';
 
 //TODO: Fazer a tela

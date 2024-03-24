@@ -6,6 +6,9 @@
 
 :root {
   --font-family-logo: 'Satisfy', cursive;
+  
+  --box-shadow-500: 2px 1px 1px #00000070;
+  
   line-height: 1.5;
   font-weight: 400;
 
@@ -150,17 +153,18 @@ button:focus-visible {
 }
 
 .btn-alert:hover {
-  background-color: #f72323da;
-  color: white;
+  background-color: #f72323da!important;
+  color: white!important;
 }
-.btn-succes:hover {
-  background-color: #23f73bcb;
-  color: white;
+.btn-success:hover {
+  background-color: #23f73bcb!important;
+  color: white!important;
 }
 .btn-warning:hover {
-  background-color: #fbc014bd;
-  color: black;
+  background-color: #fbc014bd!important;
+  color: black!important;
 }
+
 
 .btn-alert {
   background-color: #f72323da;
@@ -204,6 +208,13 @@ button:focus-visible {
   width: 100%;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 form .btn {
   margin-top: 1rem;
 }
@@ -212,7 +223,7 @@ select {
   width: 100%;
   height: 100%;
   padding: 0.3rem 0.3rem;
-  color: black;
+  color: black!important;
 }
 
 option {
@@ -236,12 +247,14 @@ option {
   border-radius: 3px;
   border: 1px solid #000000d2;
   width: 95%;
-  background-color: transparent;
-  color: #000000e9;
+  background-color: transparent!important;
+  color: #000000e9!important;
 }
 .input::placeholder {
   color: #000000e9;
 }
+
+
 
 /*  HEADER */
 .image-logo {
@@ -331,4 +344,3 @@ option {
   border-radius: 12pt;
   margin: 2rem 0;
 }
-
