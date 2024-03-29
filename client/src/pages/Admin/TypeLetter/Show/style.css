@@ -1,10 +1,12 @@
+
+
 h1.title {
   font-size: 1.78rem!important;
 }
 
 .type-letter-show  {
-  box-shadow: 0px 0px 1px #0000009b;
-  background: #ffffffb8;
+  box-shadow: 0px 0px 1px #000000db;
+  background: #ffffff;
   margin: 2rem 0;
   margin-bottom: 4rem;
   
@@ -13,13 +15,49 @@ h1.title {
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  gap: 3rem!important;
+  gap: 1rem!important;
+  max-width: 80vw;
 }
 
-.type-letter-show .dash-header {
-  border-right: 2px solid #beb5b5e0;
+.type-letter-show .dash-header {;
   padding: 1.8rem;
+  padding-bottom: 0;
 }
+
+.box-btns { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5em;
+  border-bottom: 1px solid #00000021;
+  padding-bottom: 3rem;
+}
+
 .type-letter-show .dash-container {
-  padding: 0.2rem!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem!important;
+  flex-direction: column;
+}
+
+.dash-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.dash-content .subtitle {
+  background: #000000f8;
+  color: #ffffffe4;
+  padding: 0.8rem;
+  border-radius: 6pt;
+  font-size: 0.7rem;
+}
+
+.dash-content .label-action {
+  width: 80px;
 }

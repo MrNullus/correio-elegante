@@ -20,7 +20,7 @@ const Show = () => {
   return (
     <div className="wrapper">
         <Header type="admin" />
-
+        <center>
         <main className="container type-letter-show">
           <header className="dash-header">
             <h1 className="title">
@@ -28,13 +28,27 @@ const Show = () => {
             </h1>  
             
             <div className="box-btns">
-              <button className="btn btn-success">
+              <button 
+                className="btn btn-success"
+                onClick={() => {
+                  if (confirm("Deseja realmente excluir?")) {
+                    alert("Teu cu");
+                  }
+                }}
+              >
                 Editar
               </button>
               <span>
                 |
               </span>
-              <button className="btn btn-alert">
+              <button 
+                className="btn btn-alert"
+                onClick={() => {
+                  if (confirm("Deseja realmente excluir?")) {
+                    alert("Teu cu");
+                  }
+                }}
+              >
                 Excluir
               </button>
             </div>
@@ -49,7 +63,6 @@ const Show = () => {
               </article>
               
               <article className="dash-content">
-                <h4 className="subtitle">Título</h4>
                 <p>
                   { typeLetter.description }
                 </p>
@@ -61,7 +74,7 @@ const Show = () => {
                   { typeLetter.createdAt }
                 </p>
               </article>
-              
+            
               <article className="dash-content">
                 <h4 className="subtitle">Atualizado em</h4>
                 <p>
@@ -76,8 +89,8 @@ const Show = () => {
                 </p>
               </article>
            </section>
-          
         </main>
+        </center>
     </div>
   );
 };
