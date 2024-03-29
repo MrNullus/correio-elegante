@@ -14,6 +14,8 @@ import LettersShow from "../pages/Admin/Letters/Show/";
 import LettersPayOff from "../pages/Admin/Letters/PayOff/";
 
 import TypeLetterCreate from "../pages/Admin/TypeLetter/Create/";
+import TypeLetterUpdate from "../pages/Admin/TypeLetter/Update/";
+import TypeLetterShow from "../pages/Admin/TypeLetter/Show/";
 
 
 const Router = createBrowserRouter([
@@ -37,9 +39,18 @@ const Router = createBrowserRouter([
     path: "/admin/dashboard",
     element: <Dashboard />
   },
+  
   {
     path: '/admin/type-letter/create', 
     element: <TypeLetterCreate />
+  },
+  {
+    path: '/admin/type-letter/show/:uid', 
+    element: <TypeLetterShow />
+  },
+  {
+    path: '/admin/type-letter/update/:uid', 
+    element: <TypeLetterUpdate />
   },
   
   {

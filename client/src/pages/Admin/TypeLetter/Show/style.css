@@ -1,0 +1,25 @@
+h1.title {
+  font-size: 1.78rem!important;
+}
+
+.type-letter-show  {
+  box-shadow: 0px 0px 1px #0000009b;
+  background: #ffffffb8;
+  margin: 2rem 0;
+  margin-bottom: 4rem;
+  
+  display: flex;
+  flex-flow: row wrap!important;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  gap: 3rem!important;
+}
+
+.type-letter-show .dash-header {
+  border-right: 2px solid #beb5b5e0;
+  padding: 1.8rem;
+}
+.type-letter-show .dash-container {
+  padding: 0.2rem!important;
+}
