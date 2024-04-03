@@ -264,7 +264,7 @@ const Show = () => {
                 className="btn btn-alert"
                 onClick={() => {
                   if(confirm("Deseja realmente excluir?")) {
-                    return navigator(`/admin/letters/payoff/${uid}`);
+                    alert("Excluido!");
                   }
                 }} 
               >

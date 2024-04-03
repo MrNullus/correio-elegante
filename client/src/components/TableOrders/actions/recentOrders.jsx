@@ -27,7 +27,7 @@ function generateUniqueUid() {
 }
 
 
-async function actionRecentOrders(orders, setOrders) {
+function actionRecentOrders(orders, setOrders) {
   const newOrders = [
     {
       uid    : generateUniqueUid(),
