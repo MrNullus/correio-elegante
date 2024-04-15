@@ -39,6 +39,9 @@
   animation-delay: 0.26s;
 }
 
+.show-envelope-closed {
+  background: url('../../../../assets/image/envelope-mail-close.png');
+}
 
 @keyframes close-envelope {
   from {
@@ -50,7 +53,6 @@
     visibility: hidden;
   }
 }
-
 
 
 .letter-details {
@@ -70,7 +72,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: center;;
+  align-content: center;
   border: 1px groove black;
   border-radius: 3pt;
   padding: 0.3rem;
@@ -81,7 +83,7 @@
   margin-bottom: 0.7rem;
 }
 
-.letter-details article h3.subtitle {
+.letter-details  .subtitle {
   padding: 0.3rem;
   margin: 0;
   background: #eaa12dc9;

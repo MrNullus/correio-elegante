@@ -11,38 +11,47 @@ import './style.css';
 const Show = () => {
     const [letter, setLetter] = useState({
       // head informations
-      id: 1,
-      uid: window.location.pathname.split('/')[4],
-      created_at: "12/06/2024",
-      updated_at: "12/06/2024",
-      status_payment: true,
-      price: "R$ 2,50",
-      type: "Normal",
+      head: {
+        id: 1,
+        uid: window.location.pathname.split('/')[4],
+        created_at: "12/06/2024",
+        updated_at: "12/06/2024",
+        payment: { method: 'PIX', status: true  },
+        price: "R$ 2,50",
+        type: "Normal",
+      },
       
       // style informations
-      theme: "Estilizado",
-      description: "Deve ter a imagem da Docinho",
-      color: "green",
-      shape: "heart",
+      style: {
+        theme: "Estilizado",
+        description: "Deve ter a imagem da Docinho",
+        color: "green",
+        shape: "heart",
+      },
       
       // recipient informations
-      name: "Julia Motta",
-      serie: "3",
-      course: "MTec Adm",
-      turn: "Manhã",
+      recipient: {
+        name: "Julia Motta",
+        serie: "3",
+        course: "MTec Adm",
+        turn: "Manhã",
+      },
       
       // body informations
-      message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati a iusto eum, quos, quibusdam harum incidunt nisi expedita maiores veritatis.",
-      tips: "Aquele Gustavo",
+      body: {
+        message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati a iusto eum, quos, quibusdam harum incidunt nisi expedita maiores veritatis.",
+        tips: "Aquele Gustavo",
+      },
     });
 
     return (
       <div className="wrapper">
         <Header type="admin" />
-
+        
+        
         <main className="envelope">
           <h1 className="title">
-            Cartinha:  <enfase>#{letter.uid}</enfase>
+            Cartinha:  <enfase>#{letter.head.uid}</enfase>
            </h1>
         
           <div className="envelope-content">
@@ -56,7 +65,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.uid }
+                  { letter.head.uid }
                 </span>
               </div>
               
@@ -66,7 +75,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.id }
+                  { letter.head.id }
                 </span>
               </div>
               
@@ -76,7 +85,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.created_at }
+                  { letter.head.created_at }
                 </span>
               </div>
               
@@ -86,7 +95,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.updated_at }
+                  { letter.head.updated_at }
                 </span>
               </div>
               
@@ -96,7 +105,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.type }
+                  { letter.head.type }
                 </span>
               </div>
               
@@ -110,7 +119,17 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.price }
+                  { letter.head.price }
+                </span>
+              </div>
+              
+              <div className="box-status-payment">
+                <h4 className="subtitle">
+                  Método de Pagamento
+                </h4>
+                
+                <span>
+                  { letter.head.payment.method }
                 </span>
               </div>
               
@@ -119,8 +138,8 @@ const Show = () => {
                   Status Pagamento
                 </h4>
                 
-                <span className={letter.status_payment? "box-success" : "box-error"}>
-                  { letter.status_payment? "Pago" : "Não Pago" }
+                <span className={letter.head.payment.status? "box-success" : "box-error"}>
+                  { letter.head.payment.status? "Pago" : "Não Pago" }
                 </span>
               </div>
             </article>
@@ -139,18 +158,18 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.theme }
+                  { letter.style.theme }
                 </span>
               </div>
               
-              { letter.description && (
+              { letter.style.description && (
                 <div className="box-description-style">
                   <h4 className="subtitle">
                     Descrição
                   </h4>
                   <span>
         
-                    <center>{ letter.description }</center>
+                    <center>{ letter.style.description }</center>
                   </span>
                 </div>
                 )
@@ -162,7 +181,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.shape }
+                  { letter.style.shape }
                 </span>
               </div>
             
@@ -172,7 +191,7 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.color }
+                  { lette.style.color }
                 </span>
               </div>
             </article>
@@ -192,32 +211,32 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.name }
+                  { letter.recipient.name }
                 </span>
               </div>
               
               <div className="box-info-course">
                 <select name="" id="serie">
                   <option 
-                    value={letter.serie.toLocaleLowerCase()}
+                    value={letter.recipient.serie}
                   >
-                    { letter.serie }
+                    { letter.recipient.serie }
                   </option>
                 </select>
                 
                 <select name="" id="">
                   <option 
-                    value={letter.course.toLocaleLowerCase()}
+                    value={letter.recipient.course}
                   >
-                    { letter.course }
+                    { letter.recipient.course }
                   </option>
                 </select>
                 
                 <select name="" id="">
                   <option 
-                    value={letter.turn.toLocaleLowerCase()}
+                    value={letter.recipient.turn}
                   >
-                    { letter.turn }
+                    { letter.recipient.turn }
                   </option>
                 </select>
               </div>
@@ -238,19 +257,19 @@ const Show = () => {
                 </h4>
                 
                 <span>
-                  { letter.message }
+                  { letter.body.message }
                 </span>
               </div>
               
               {
-                letter.tips && (
+                letter.body.tips && (
                   <div className="box-tips">
                     <h4 className="subtitle">
                       Dica
                     </h4>
                     
                     <span>
-                      { letter.tips }
+                      { letter.body.tips }
                     </span>
                   </div>
                 )
@@ -279,7 +298,11 @@ const Show = () => {
             <buttton 
               className="btn btn-handle-envelope" 
               title="Fechar/Abrir correio"
-              onClick={() => document.querySelector('.envelope-content').classList.toggle('animate-envelope-toggle')}
+              onClick={() => {
+                document.querySelector('.envelope-content').classList.toggle('animate-envelope-toggle');
+                
+                document.querySelector('.envelope').classList.toggle('show-envelope-closed');
+              }}
             >
               ❤️
             </buttton>
