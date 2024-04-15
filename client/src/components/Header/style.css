@@ -8,6 +8,15 @@
   margin-bottom: 3rem;
 }
 
+.header menu item {
+  padding-bottom: 1.2rem;
+}
+
+.header menu item:hover {
+   border-bottom: 2px solid #dc1b1b;
+ }
+
+
 @media only screen and (max-width: 460px) {
  .header { 
    gap: 2rem;
@@ -41,9 +50,9 @@
    justify-content: flex-start;
    align-items: flex-start;
    flex-direction: column;
-   gap: 3rem;
+   gap: 1.5rem;
    width: 80vw;
-   height: 100vh;
+   height: auto;
    background: black;
    z-index: 10000;
    color: whitesmoke;
@@ -51,17 +60,17 @@
    border-radius: 12pt;
    text-align: left;
    padding: 2rem;
+   padding-bottom: 3em;
  } 
  
  .header menu item {
+   border 1px solid;
    padding: 1rem;
  }
 
+
  .header menu item a {
-   padding: 2rem;
-   background: red;
-   border-bottom: 4px solid rgba(0, 0, 0, 0.6);
-   border-radius: 6pt;a
+   border-radius: 6pt;
    width: 200px!important;
  }
 
@@ -87,9 +96,9 @@
    justify-content: flex-start;
    align-items: flex-start;
    flex-direction: column;
-   gap: 1rem;
+   gap: 3rem;
    width: 55vw;
-   height: 100vh;
+   height: auto;
    background: black;
    z-index: 10000;
    color: whitesmoke;
@@ -97,6 +106,7 @@
    border-radius: 12pt;
    text-align: left;
    font-size: 2rem;
+   padding-bottom: 1.5em;
  }
 
  .header .btn-menu {
