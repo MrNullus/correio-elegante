@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 
 import Home from "../pages/Home";
+import GuestCreateMyMail from "../page/Guest/CreateMyMail";
+
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
 
@@ -19,10 +21,15 @@ import TypeLetterShow from "../pages/Admin/TypeLetter/Show/";
 
 
 const Router = createBrowserRouter([
+  // ~@> Guest
   { 
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/create-my-mail",
+    element: <GuestCreateMyMail />,
+  }
   
   // ~@> AUTH
   {
