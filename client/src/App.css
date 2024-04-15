@@ -136,6 +136,7 @@ option {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   position: relative;
+  
 }
 
 @media (max-width: 760px) {
@@ -154,10 +155,3 @@ option {
     object-fit: center;
   }
 }
-
-
-.carta-container {
-  animation: openLetter 1s ease-in-out both;
-  transform: translateY(-100%);
-}
-
