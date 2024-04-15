@@ -1,0 +1,27 @@
+.wrapper {
+  height: 100vh!important;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+main {
+  height: 100vh!important;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+section.welcome {
+  margin: 4rem 0;
+  margin-bottom: 6rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.envelope {
+  width: 96%!important;
+  margin: 0 auto;
+}
