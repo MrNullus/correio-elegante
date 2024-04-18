@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from "../pages/Home";
-import GuestCreateMyMail from "../page/Guest/CreateMyMail";
+import Home from "../pages/Guest/Home";
+import GuestCreateMyMail from "../pages/Guest/CreateMyMail";
 
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
@@ -29,7 +29,7 @@ const Router = createBrowserRouter([
   {
     path: "/create-my-mail",
     element: <GuestCreateMyMail />,
-  }
+  },
   
   // ~@> AUTH
   {

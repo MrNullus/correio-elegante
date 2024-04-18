@@ -133,6 +133,7 @@ button:focus-visible {
   width: 100%;
   padding: 1rem;
   border: 3px solid rgb(0, 0, 0);
+  font-size: 1.2rem;
 }
 .btn:hover {
   background-color: black;
@@ -178,7 +179,7 @@ button:focus-visible {
   color: white;
 }
 .btn-success {
-  background-color: #23f73bcb;
+  background-color: #33f73bff;
   color: white;
 }
 .btn-warning {
