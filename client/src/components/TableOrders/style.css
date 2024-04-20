@@ -32,14 +32,18 @@
   gap: 0.45rem;
 }
 
+/* .box-table header menu .search-order {
+  
+}
+ */
 .box-table header menu item {
   position: relative;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .box-table header menu item select option {
-  color: black;
+  color: white;
 }
 
 .box-table header menu item input,
@@ -51,11 +55,19 @@
 
 .box-table header menu item select { 
   padding: 0.46rem;
+  height: 40px;
+  color: white!important;
+}
+
+.box-table header menu item input {
+  width: 90%;
+  height: 40px;
+  background: #ffffff6c;
 }
 
 .box-table header menu item input::placeholder {
   color: #ffffffd8!important;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .box-table header menu item input {

@@ -35,38 +35,117 @@ function Header({ type }) {
       </h1>
 
       <div className='header__icon-action'>
-        {
-      type === 'guest'?
-      (<a href="/auth/login" style={ { color: 'rgb(253,40,104)' }}>
-            <MdAdminPanelSettings />
-          </a>):
-      (
         <button
-          className='btn btn-menu'
+          classname='btn btn-menu'
           onClick={handleShowMenu}
-          >
-              ☰
-            </button>
-      )
-      }
-    </div>
-      { (showMenu && type === 'admin') && (
-      <menu>
-          <item
-        className='btn-close'
-        onClick={handleShowMenu}
         >
+          ☰
+        </button>
+      </div>
+      { showMenu && (
+        <menu>
+          <item
+            className='btn-close'
+            onClick={handleShowMenu}
+          >
             X
           </item>
-          <item>
-            <a href='/admin/dashboard'>
-              Home
-            </a>
-          </item>
-      </menu>
-    )}
-  </header>
-);
+
+          {  type === 'admin'?
+              (
+                <>
+                <item>
+                  <a href='/admin/dashboard'>
+                    Home
+                  </a>
+                </item>
+                </>
+              )
+              :
+              ( 
+                <>
+                 <item>
+                  <a href="/" 
+                    style={ { color: 'rgb(253,40,104)' }
+                  }>
+                    <i class="fi fi-rr-house-blank"></i> 
+                    &nbsp;
+                    Home
+                  </a>
+                </item>
+
+                <item>
+                  <a href="/our-catalogue" 
+                    style={ { color: 'rgb(253,40,104)' }
+                }>
+                    <i class="fi fi-rr-newspaper-open"></i>
+                    &nbsp;
+                    Nosso Catálogo
+                  </a>
+                </item>
+
+                <item>
+                  <a href="/create-my-mail" 
+                    style={ { color: 'rgb(253,40,104)' }
+                  }>
+                    <i class="fi fi-rr-envelope-plus"></i>  
+                    &nbsp;
+                    Criar meu Corrreio
+                  </a>
+                </item>
+
+                <item>
+                  <a href="/check-mail" 
+                    style={ { color: 'rgb(253,40,104)' }
+                  }>
+                    <i class="fi fi-tr-envelope-open-text"></i>
+                    &nbsp;
+                    Conferir Corrreio
+                  </a>
+                </item>
+
+                <item>
+                  <a href="/help-me-amorim" 
+                    style={ { color: 'rgb(253,40,104)' }
+                  }>
+                    <i class="fi fi-rr-heart-arrow"></i>
+                    &nbsp;
+                    Ajuda-me Amorim
+                  </a>
+                </item>
+
+                <item>
+                  <a href="/report" 
+                    style={ { color: 'rgb(253,40,104)' }
+                }>
+                   <i class="fi fi-rr-hexagon-exclamation"></i>
+                    &nbsp;
+                    Reportar
+                  </a>
+                </item>
+
+                <item style={{  width: "100px"  }}>
+                  <hr 
+                    claassName="separator" 
+                  />
+                </item>
+
+                <item>
+                  <a href="/auth/login" 
+                    style={ { color: 'rgb(253,40,104)' }  
+                  }>
+                    <i class="fi fi-rr-clipboard-user"></i>
+                    &nbsp;
+                    Login
+                  </a>
+                </item>
+                </>
+              )
+          }
+        </menu>
+      )}
+    </header>
+  );
 }
 
 export default Header;

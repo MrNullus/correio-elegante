@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-
 import { useNavigate } from "react-router-dom";
+
 import { actionRecentOrders } from './actions/recentOrders';
 import { handleSearchOrder } from './handles/searchOrder.jsx';
 
@@ -9,6 +9,9 @@ import './style.css';
 function TableOrders() {
   const navigator = useNavigate();
   const [ orders, setOrders ] = useState([]);
+  const [labelActions, setLabelActions] = useState({
+    searchOrder: { text: '', action: '' }
+  });
   
   
   useEffect(() => {
@@ -22,17 +25,17 @@ function TableOrders() {
         <h3>Confira os pedidos recentes</h3>
         
         <menu>
-          <item>
+          <item className="search-order">
             <i 
-              class="fas fa-search" 
+              class="fas fa-search sr-only" 
               style={{ color: "#ffffff" }}></i>
           
-            <input 
+            <input
               type="search" 
               name="searchOrder" 
               id="searchOrder"
               placeholder="Digite o UID"
-              onChange={({ target }) => handleSearchOrder(target.value, orders, setOrders)}
+              onChange={({ target }) => handleSearchOrder(target.value, orders, setOrders, labelActions, setLabelActions)}
             />
           </item>
           
@@ -44,7 +47,19 @@ function TableOrders() {
             </select>
           </item>
         </menu>
+        
+        <label 
+          forHTML="searchOrder" 
+          className={`
+            lblAlertTitle 
+            label-action  
+            label-error
+            ${ orders.length === 0? '' : 'sr-only'  }
+          `}>
+            Correio não encontrado! 
+        </label>
       </header>
+      
       
       <table cellspacing="3px">
         <thead>

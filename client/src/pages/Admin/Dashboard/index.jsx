@@ -3,12 +3,11 @@ import { useState, useEffect } from 'react';
 
 import Header from '../../../components/Header';
 import { TableOrders } from '../../../components/TableOrders';
-import { SectionOrderStatistics } from '../../../components/SectionOrderStatistics/';
+import { SectionPreviewOrderStatistics } from '../../../components/SectionPreviewStatistics/';
 import { SectionQuickActions } from '../../../components/SectionQuickActions/'
 
 import './style.css';
 
-//TODO: Renomear SectionOrderStatistics para SectionPreviewOrderStatistics  
 
 const Dashboard = () => {
 
@@ -61,7 +60,7 @@ const Dashboard = () => {
           
           <hr className="separator" />
         
-          <SectionOrderStatistics />
+          <SectionPreviewOrderStatistics />
         </main>
       </div>
 

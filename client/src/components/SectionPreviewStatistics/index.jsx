@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
 import './style.css';
 
-const SectionOrderStatistics = () => {
+const SectionPreviewOrderStatistics = () => {
   
   const [data, setData] = useState([]);
 
@@ -135,4 +135,4 @@ const SectionOrderStatistics = () => {
 };
 
 
-export { SectionOrderStatistics };
+export { SectionPreviewOrderStatistics };
