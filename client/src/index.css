@@ -30,6 +30,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.font-manuscrit {
+  font-family: var(--font-family-logo)!important;
+}
+
 #root {
   max-width: 1280px;
   width: -webkit-fill-available;

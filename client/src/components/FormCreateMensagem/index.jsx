@@ -12,7 +12,7 @@ function FormCreateMensagem() {
 
             <center className="envelope">
                 <div className="envelope-content">
-                    <h2 className="title">Cartinha</h2>
+                    <h2 className="subtitle">Cartinha</h2>
 
                     <div className="form form-mensagem-create">
                         <form action="">

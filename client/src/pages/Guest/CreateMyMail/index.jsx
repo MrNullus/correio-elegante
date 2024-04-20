@@ -14,20 +14,22 @@ const CreateMyMail = () => {
       <main>
         
         <section className="welcome">
-          <h2 className="subtitle">
-            Sinta-se livre e liberte seus pensamentos!
+          <h2 className="title font-manuscrit">
+            Liberte seus pensamentos!
           </h2>
   
           <p>
-            Não fique com medo, tudo é estritamente anônimo e criptografado!
+            <i>Garantimos total anonimato e criptografia.</i>
           </p>
         </section>
+
+        <br/>
 
         <FormCreateMensagem />
 
         <section className="help-me-amorim">
           <header>
-            <h1>Está precisando de ajuda?</h1>
+            <h2 className="subtitle">Está precisando de ajuda?</h2>
             <i class="fi fi-tr-lightbulb-exclamation"></i>
           </header>
 
@@ -36,13 +38,15 @@ const CreateMyMail = () => {
               <br /><br/>
               <ul>
                 <li>
-                  Uma seleção dos melhores textos para você enviar
+                  Uma seleção dos melhores textos para você enviar ou ter inspiração. 💌
                 </li>
                 <li>
-                  Caso lhe falte criatividade peça ao Amorim um texto personalizado e do jeito que você quer que a pessoa receba
+                  Se precisar de inspiração, peça ao <strong>Amorim</strong> um texto personalizado. 🌟
                 </li>
                 </ul>
                 </p>
+          
+          <br/>
 
           <button className="btn btn-success">
             Acessar Amorim
