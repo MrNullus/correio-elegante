@@ -1,0 +1,68 @@
+.wrapper {
+  height: 100vh!important;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+main {
+  height: 100vh!important;
+  margin-bottom: 6em;
+  margin-top: 2rem;
+}
+
+
+.create-my-mail header {
+  margin: 2rem 0;
+}
+
+.create-my-mail .welcome h2 {
+  font-size: 2.6em;
+  margin: 2rem 0;
+}
+
+.create-my-mail .help-me-amorim h2 {
+  font-size: 1.3em;
+  color: #fd1234;
+}
+
+.create-my-mail .help-me-amorim i {
+  font-size: 1.98em!important;
+  color: #fd1234;
+}
+
+.create-my-mail section.welcome {
+  margin: 1rem 0;
+  margin-bottom: 1em;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.envelope {
+  width: 96%!important;
+  margin: 0 auto;
+}
+
+
+.create-my-mail section.help-me-amorim {
+  background: #fefefe;
+  padding: 1em;
+  border-radius: 6pt;
+  box-shadow: 0px 0px 1px black;
+}
+
+.create-my-mail section.help-me-amorim p ul {
+  list-style: "->";
+  display: flex;
+  gap: 1.4rem;
+  width: auto;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: left;
+  text-indent: 0.9rem;
+  line-height: 22pt;
+}
+
