@@ -1,10 +1,10 @@
 .header {
   display: flex;  
   flex-direction: row;
-  justify-content: space-between;       
+  justify-content: space-evenly;       
   align-items: center;
   border-radius: 4px;
-  padding: 1.9rem 0;
+  padding: 1.9rem 0.8rem;
   margin-bottom: 3rem;
 }
 
@@ -75,14 +75,14 @@
  }
 
  .btn-close {
-   text-align: right;
-   font-size: 1.5rem!important;
+   text-align: right,;
+   font-size: 1.2rem!important;
    color: #dc1b1b;
    border: solid 5px;
-   border-radius: 6pt;
-   width: 30px!important;
-   height: 20px!important;
-   line-height: 20px;
+   border-radius: 6px!important;
+   width: 20px!important;
+   height: 15px!important;
+   line-height: 20px!important;
  }
 }
 
@@ -110,7 +110,7 @@
  }
 
  .header .btn-menu {
-   width: 100px;
+   width: 80px!important;
    height: 100px;
  }
 
@@ -149,7 +149,9 @@
   border: solid 5px;
   border-radius: 12pt;
   padding: 1rem;
-  width: 60px;
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
   align-self: flex-end!important;
   margin-right: 22pt;
 }

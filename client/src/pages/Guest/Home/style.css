@@ -8,15 +8,15 @@
   justify-content: space-between;
 }
 
-.border-simple-grey {
-  border: 2px solid;
+.border-warning {
+  border: 2px solid orange;
 }
 
 main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 6em;
+  gap: 8em;
   width: 100%;
   place-items: center;
 }
@@ -30,10 +30,12 @@ main {
 
 .home-guest .welcome {
   border-radius: 6pt;
-  height: auto;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2.5rem;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 1.5rem;
   position: relative;
@@ -44,6 +46,7 @@ main {
 .home-guest section .btn {
   margin-top: 1rem;
   font-size: 1em;
+  width: 250px;
 }
 
 .home-guest .welcome::before {  
@@ -67,14 +70,36 @@ main {
 }
 
 
-
+/*
 .envelope {
   width: 96%!important;
   margin: 0 auto;
 }
+*/
 
 ::selection {
   color: crimson;
-  background: transparent;
+  background: black;
+}
+
+.home-guest .section-report {  
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.home-guest .section-report p,
+.home-guest .section-report .btn-warning {
+  color: whitesmoke;
+}
+
+.home-guest .section-report .subtitle i {
+  font-size: 1.5rem;
+}
+
+.home-guest .section-report .btn-warning {
+  background: orange;
+}
+
+.home-guest .section-report .subtitle {
+  color: orange;
 }
 

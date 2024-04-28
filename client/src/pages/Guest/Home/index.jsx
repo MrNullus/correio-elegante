@@ -14,16 +14,18 @@ const Home = () => {
       <main className="home-guest">
         
         <section className="welcome">
-          <h2 className="subtitle">
-            Bem-vindo ao Correio Elegante! 💌
-          </h2>
-  
-          <p>
-            Olá! Estamos muito felizes em vê-lo. Aqui, você pode enviar mensagens anônimas cheias de carinho e gentileza.
-          </p>
-          <p>
-            Navegue pelo nosso site, explore as diferentes opções e não hesite em enviar uma mensagem para alguém especial. Lembre-se, suas palavras têm o poder de trazer um sorriso para o rosto de alguém.
-          </p>
+          <article>
+            <h2 className="subtitle">
+              Bem-vindo ao Correio Elegante! 💌
+            </h2>
+
+            <p>
+              Olá! Estamos muito felizes em vê-lo. Aqui, você pode enviar mensagens anônimas cheias de carinho e gentileza.
+            </p>
+            <p>
+              Navegue pelo nosso site, explore as diferentes opções e não hesite em enviar uma mensagem para alguém especial. Lembre-se, suas palavras têm o poder de trazer um sorriso para o rosto de alguém.
+            </p>
+          </article>
 
           <button className="btn btn-alert">
             Quero enviar o meu Correio
@@ -48,14 +50,18 @@ const Home = () => {
         </section>
 
 
-        <section className="section-common border-simple-grey">
+        <section className="section-common section-report border-warning">
           <h2 className="subtitle">
+             <i class="fi fi-rr-hexagon-exclamation"></i>
+            <br/><br/>
             Sua opinião é importante!
           </h2>
+          <br/>
 
           <p>
-            Caso queira reportar algum erro, sugestão ou qualquer problema, não tema! Basta apenas clickar no botão logo abaixo e retortar a questão.
+            Caso queira reportar algum erro, sugestão ou qualquer problema, não tema! Basta apenas clickar no botão logo abaixo e reportar a questão.
           </p>
+          <br/>
 
           <button className="btn btn-warning">
             Reportar!
