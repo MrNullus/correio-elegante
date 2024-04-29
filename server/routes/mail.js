@@ -1,21 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
-const LetterController = require('../controllers/LetterController');
+const MailController = require('../controllers/MailController');
+
 
 /**
  * @swagger
  * tags:
- *   name: Letters
- *   description: API para gerenciamento de cartas elegantes.
+ *   name: Mails
+ *   description: API para gerenciamento dos Correios Elegantes.
  */
 
 /**
  * @swagger
- * /api/correio-elegante/letters:
+ * /api/correio-elegante/mails/:
  *   get:
  *     summary: Obtém todas as cartas elegantes.
- *     tags: [Letters]
+ *     tags: [Mails]
  *     responses:
  *       '200':
  *         description: Lista de cartas elegantes.
@@ -27,7 +28,7 @@ router.get('/', LetterController.selectAll);
 
 /**
  * @swagger
- * /api/correio-elegante/letters:
+ * /api/correio-elegante/mails:
  *   post:
  *     summary: Insere uma nova carta elegante.
  *     tags: [Letters]
