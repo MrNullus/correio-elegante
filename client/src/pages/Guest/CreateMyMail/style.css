@@ -8,16 +8,13 @@ main {
   height: 100vh!important;
   margin-bottom: 6em;
   margin-top: 2rem;
-}
-
-
-.create-my-mail header {
-  margin: 2rem 0;
+  min-width: 300px;
+  padding-bottom: 3rem;
 }
 
 .create-my-mail .welcome h2 {
   font-size: 2.6em;
-  margin: 2rem 0;
+  margin-bottom: 1.2rem;
 }
 
 .create-my-mail .help-me-amorim h2 {
@@ -42,16 +39,26 @@ main {
 }
 
 .envelope {
-  width: 96%!important;
+  width: 80%;
   margin: 0 auto;
+  margin: 0!important;
 }
 
-
-.create-my-mail section.help-me-amorim {
-  background: #fefefe;
-  padding: 1em;
+.create-my-mail .help-me-amorim {
+  background: black;
+  padding: 1.5em 0.9em;
   border-radius: 6pt;
   box-shadow: 0px 0px 1px black;
+  color: whitesmoke;
+  margin: 0.75rem;
+}
+
+.create-my-mail .help-me-amorim header {
+  padding: 1.5em 0;
+}
+
+.create-my-mail section.help-me-amorim p {  
+  padding: 0 .5rem;
 }
 
 .create-my-mail section.help-me-amorim p ul {

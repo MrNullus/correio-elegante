@@ -7,8 +7,7 @@ function FormCreateMensagem() {
 
     return (
         <>
-            <br />
-            <br />
+  
 
             <center className="envelope">
                 <div className="envelope-content">
@@ -36,7 +35,7 @@ function FormCreateMensagem() {
                                     <label htmlFor="" className="sr-only">
                                         Serie
                                     </label>
-                                    <select name="serie" id="">
+                                    <select  name="serie" id="">
                                         <option value="1">1⁰</option>
                                         <option value="2">2⁰</option>
                                         <option value="3">3⁰</option>

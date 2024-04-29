@@ -1,27 +1,105 @@
 .wrapper {
-  height: 100vh!important;
+  width: 100%;
+  height: 100%!important;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.border-warning {
+  border: 2px solid orange;
 }
 
 main {
-  height: 100vh!important;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+  width: 100%;
+  place-items: center;
 }
 
-section.welcome {
-  margin: 4rem 0;
-  margin-bottom: 6rem;
-  height: auto;
+.home-guest section {
+  max-width: 70%;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 6pt;
+}
+
+.home-guest .welcome {
+  border-radius: 6pt;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2.5rem;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  color: white!important;
+  background: rgba(0, 0, 0, 0.7);
 }
 
+.home-guest section .btn {
+  margin-top: 1rem;
+  font-size: 1em;
+  width: 250px;
+}
+
+.home-guest .welcome::before {  
+  content: '';
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+ background-image: url('../../../assets/image/typewriter-with-cupid.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  border-radius: 6pt;
+}
+
+.home-guest .welcome p,
+.home-guest .section-common p {
+  font-size: 0.8rem;
+}
+
+
+/*
 .envelope {
   width: 96%!important;
   margin: 0 auto;
 }
+*/
+
+::selection {
+  color: crimson;
+  background: black;
+}
+
+.home-guest .section-report {  
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.home-guest .section-report p,
+.home-guest .section-report .btn-warning {
+  color: whitesmoke;
+}
+
+.home-guest .section-report .subtitle i {
+  font-size: 1.5rem;
+}
+
+.home-guest .section-report .btn-warning {
+  background: orange;
+}
+
+.home-guest .section-report .subtitle {
+  color: orange;
+}
+

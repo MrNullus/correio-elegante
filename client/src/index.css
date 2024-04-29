@@ -39,11 +39,13 @@
   width: -webkit-fill-available;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1pt!important;
-}
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+} 
 
 a {
   text-decoration: none;
@@ -53,8 +55,16 @@ main {
   padding-bottom: 2rem;
 }
 
+.wrapper {
+  height: 100vh;
+}
+
 form {
   width: 90%;
+}
+
+footer {
+  height: 150px!important;
 }
 
 .box-error {
@@ -66,6 +76,9 @@ form {
   color: white;
 }
 
+.border-error {
+  border: 2px solid crimson;
+}
 
 .title {
   font-size: 2.4rem;
@@ -91,9 +104,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .text-logo {
@@ -356,3 +370,8 @@ option {
   border-radius: 12pt;
   margin: 2rem 0;
 }
+
+footer { 
+  height: 100vh;
+}
+

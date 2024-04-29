@@ -8,11 +8,11 @@ app.use(express.json());
 
 const messageRoutes = require('./routes/message');
 const userRoutes = require('./routes/user');
-const letterRoutes = require('./routes/letter');
+const mailRoutes = require('./routes/mail');
 
 app.use('/api/correio-elegante/message', messageRoutes);
 app.use('/api/correio-elegante/user', userRoutes);
-app.use('/api/correio-elegante/letters', letterRoutes);
+app.use('/api/correio-elegante/mails', mailRoutes);
 
 const swaggerSetup = require('./swagger');
 swaggerSetup(app);
