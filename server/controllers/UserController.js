@@ -1,4 +1,3 @@
-const db = require('../configs/database');
 
 class UserController {
 
