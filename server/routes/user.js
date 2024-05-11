@@ -156,7 +156,6 @@ const UserController = require('../controllers/UserController');
   *         description: Erro interno do servidor.
   */
  router.put('/:id', UserController.updateUser);
- 
 
  /**
   * @swagger
@@ -170,7 +169,7 @@ const UserController = require('../controllers/UserController');
   *         required: true
   *         description: ID do usuário.
   *         schema:
-  *           type: integer
+  *           type: number
   *     responses:
   *       '200':
   *         description: Usuário excluído com sucesso.
