@@ -23,7 +23,7 @@ const LetterController = require('../controllers/LetterController');
  *       '500':
  *         description: Erro interno do servidor.
  */
-//router.get('/', LetterController.selectAll);
+router.get('/', LetterController.selectAll);
 
 
 /**
