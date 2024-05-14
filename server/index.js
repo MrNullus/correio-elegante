@@ -21,13 +21,4 @@ swaggerSetup(app);
 app.listen(3000, () => {
   console.log('Servidor iniciado na porta 3000');
 
-  FirebaseService.db.writeData(
-    'letters/'+'caju',
-    {
-      username: "Punk da Silva",
-      email: "Lalala@gmail.com"
-    }
-  );
-
-  FirebaseService.db.getAllDataIn('letters');
 });

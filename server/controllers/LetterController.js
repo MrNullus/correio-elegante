@@ -1,13 +1,26 @@
+const { response } = require("express");
+const FirebaseService = require("../services/firebase/index.jsx");
+
 
 class LetterController {
   /**
    * Obtém todas as cartas.
-   * @param {object} req - Objeto de requisição.
-   * @param {object} res - Objeto de resposta.
+   * @param {object} request - Objeto de requisição.
+   * @param {object} response - Objeto de resposta.
    * @returns {object} - Lista de cartas.
    */
-  async selectAll(req, res) {
-    
+  async selectAll(request, response) {
+    // Retrive Letters
+    const letters = FirebaseService.db.getAllDataIn('letters');
+
+    // Send letters
+    letters
+      .then((letter) => { 
+        response.status(200).send(letter);
+      })
+      .catch((error) => {
+        response.status(500).send({ error });
+      })
   }
 
    /**
