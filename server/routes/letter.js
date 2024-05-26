@@ -169,7 +169,7 @@ router.post('/', LetterController.insertData);
  * @swagger
  * /api/correio-elegante/letters/{uid}/:
  *   put:
- *     summary: Atualiza uma carta elegante pelo ID.
+ *     summary: Atualiza uma carta elegante pelo UID.
  *     tags: [Letters]
  *     requestBody:
  *       description: Dados da carta elegante a serem atualizados.
@@ -179,20 +179,27 @@ router.post('/', LetterController.insertData);
  *           schema:
  *             type: object
  *             properties:
- *               id:  
- *                 type: integer  
- *                 description: ID do correio elegante (gerado automaticamente)
- *               uid:   
- *                 type: string
- *                 description: UID do correio elegante
- *               created_at:
- *                 type: string  
- *                 format: date-time
- *                 description: Data de Criação (gerada automaticamente)
- *               updated_at:    
- *                 type: string  
- *                 format: date-time
- *                 description: Data de Atualização (gerada automaticamente)
+ *               head:
+ *                 type: object
+ *                 properties:
+ *                    id:  
+ *                      type: integer  
+ *                      description: ID do correio elegante (gerado automaticamente)
+ *                    uid:   
+ *                      type: string
+ *                      description: UID do correio elegante
+ *                    created_at:
+ *                      type: string  
+ *                      format: date-time
+ *                      description: Data de Criação (gerada automaticamente)
+ *                    updated_at:    
+ *                      type: string  
+ *                      format: date-time
+ *                      description: Data de Atualização (gerada automaticamente)
+ *                    type:   
+ *                      type: string
+ *                      description: Tipo do Correio Elegante
+ *
  *               payment:
  *                 type: object  
  *                 properties:
@@ -205,9 +212,7 @@ router.post('/', LetterController.insertData);
  *                   price:   
  *                     type: number
  *                     description: Valor a ser pago
- *               type:   
- *                 type: string
- *                 description: Tipo do Correio Elegante
+
  *               style:   
  *                 type: object  
  *                 properties:
@@ -246,7 +251,6 @@ router.post('/', LetterController.insertData);
  *                     description: Mensagem do Correio
  *                   tips:   
  *                     type: string
- *                     description: Dicas de quem enviou o Correio
  *     responses:
  *       '200':
  *         description: Carta elegante atualizada com sucesso.

@@ -5,21 +5,23 @@ const Iara = require('../utils/Iara/index.js');
 class LetterEntity 
 {
 
-
   create(newLetter) {
     newLetter.head.uid = Iara.generateUID();
     newLetter.head.id  = Iara.generateID();
     console.log(newLetter);
 
     FirebaseService.db.writeData(
-      `letters/${newLetter.head.uid}`, newLetter
+      `letters/${newLetter.head.uid}`, 
+      newLetter
     );
   }
 
-  update(updatedLetter) {
-    console.log(updatedLetter)
+  update(changedLetter) {
+    console.log(changedLetter)
+
     FirebaseService.db.updateData(
-      
+      `letters/${changedLetter.head.uid}`,
+      changedLetter
     );
   }
 

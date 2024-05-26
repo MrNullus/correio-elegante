@@ -75,8 +75,14 @@ class LetterController {
    * @returns {object} - Mensagem de sucesso.
    */
   async updateData(request, response) {
-    const data = request.body;
-    LetterEntity.update(data);
+    try {
+      const data = request.body;
+      LetterEntity.update(data);
+      response.send({ status: 200, message: 'Carta elegante atualida com sucesso.' });
+    } catch(error) {
+      console.log(error);
+      response.send({ status: 500, message: 'Erro interno do servidor.' })
+    }
   }
 
   /**
