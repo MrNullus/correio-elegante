@@ -16,8 +16,7 @@ const Show = () => {
         uid: window.location.pathname.split('/')[4],
         created_at: "12/06/2024",
         updated_at: "12/06/2024",
-        payment: { method: 'PIX', status: true  },
-        price: "R$ 2,50",
+        payment: { method: 'PIX', status: true, price: "R$ 2,50"},
         type: "Normal",
       },
       

@@ -117,29 +117,8 @@ class FirebaseDB {
  */
   async writeData(path, data) 
   {
-    try 
-    {
-      // Check if data already exists at the specified path
-      const dataExists = await this.getByPath(path);
-
-      if (!dataExists) 
-      {
-        // Write data to the specified path
-        await set(ref(this.db, path), data);
-        console.log(`Data written to path: ${path}`);
-        return true;
-      } 
-        else 
-      {
-        console.log(`Data already exists at path: ${path}`);
-        return false;
-      }
-    } 
-      catch (error) 
-    {
-      console.error("Error writing data:", error);
-      return false; // Indicate error condition
-    }
+    await set(ref(this.db, path), data);
+    console.log(`Data written to path: ${path}`);
   }
 
 }

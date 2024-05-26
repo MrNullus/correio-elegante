@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const CONFIGS = require('./configs/')
 const app = express();
-
-const FirebaseService = require('./services/firebase/index.jsx');
 
 
 app.use(cors());
@@ -18,7 +17,7 @@ const swaggerSetup = require('./swagger');
 swaggerSetup(app);
 
 
-app.listen(3000, () => {
+app.listen(CONFIGS.SERVER_PORT, () => {
   console.log('Servidor iniciado na porta 3000');
-
 });
+
