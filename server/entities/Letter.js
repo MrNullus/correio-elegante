@@ -25,6 +25,12 @@ class LetterEntity
     );
   }
 
+  delete(letterUID) {
+    console.log(letterUID)
+
+    FirebaseService.db.deleteData(`letters/${letterUID}`);
+  }
+
 }
 
 module.exports = new LetterEntity();
