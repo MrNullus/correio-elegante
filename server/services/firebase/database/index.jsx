@@ -117,8 +117,23 @@ class FirebaseDB {
  */
   async writeData(path, data) 
   {
-    await set(ref(this.db, path), data);
-    console.log(`Data written to path: ${path}`);
+    await set(ref(this.db, path), data)
+    .then(() => {
+      console.log(`Data write to path: ${path}`);
+    })
+    .catch((error) => {
+      console.log(`Error: ${error}`)
+    })
+  }
+
+  async updateData(path, data) {
+    await set(ref(this.db, path), data)
+    .then(() => {
+      console.log(`Data update to path: ${path}`);
+    })
+    .catch((error) => {
+      console.log(`Error: ${error}`)
+    })
   }
 
 }
