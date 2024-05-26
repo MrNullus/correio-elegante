@@ -61,6 +61,7 @@ class LetterController {
     try {
       const data = request.body;
       LetterEntity.create(data);
+
       response.send({ status: 200, message: 'Carta elegante inserida com sucesso.' });
     } catch(error) {
       console.log(error);
@@ -72,16 +73,17 @@ class LetterController {
    * Atualiza uma carta pelo ID.
    * @param {object} req - Objeto de requisição.
    * @param {object} res - Objeto de resposta.
-   * @returns {object} - Mensagem de sucesso.
+   * @returns {object} - Mensagem de resposta.
    */
   async updateData(request, response) {
     try {
       const data = request.body;
       LetterEntity.update(data);
+
       response.send({ status: 200, message: 'Carta elegante atualida com sucesso.' });
     } catch(error) {
       console.log(error);
-      response.send({ status: 500, message: 'Erro interno do servidor.' })
+      response.send({ status: 500, message: 'Erro interno do servidor.', error })
     }
   }
 
@@ -89,9 +91,18 @@ class LetterController {
    * Deleta uma carta pelo ID.
    * @param {object} req - Objeto de requisição.
    * @param {object} res - Objeto de resposta.
-   * @returns {object} - Mensagem de sucesso.
+   * @returns {object} - Mensagem de resposta.
    */
   async deleteData(request, response) {
+    try {
+      const letterUID = request.body.uid
+      LetterEntity.deleteData(letterUID);
+
+      response.send({ status: 200, message: 'Carta Elegante deletada com sucesso' });
+    } catch(error) {
+      console.log(error);
+      response.send({ status: 500, message: 'Erro interno no servidor', error })
+    }
   }
 }
 
