@@ -272,7 +272,7 @@ router.put('/:uid', LetterController.updateData);
  *         required: true
  *         description: UID da carta elegante a ser deletada.
  *         schema:
- *           type: integer
+ *           type: string
  *     responses:
  *       '200':
  *         description: Carta elegante deletada com sucesso.
