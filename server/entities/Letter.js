@@ -4,6 +4,21 @@ const Iara = require('../utils/Iara/index.js');
 
 class LetterEntity 
 {
+  entity = 'letters';
+
+  getAll() {
+    const letters = FirebaseService.db.getAllDataIn(this.entity);
+
+    return letters;
+  }
+
+  getByUID(uid) {
+    const letterFound = FirebaseService.db.getByPath(
+      `${this.entity}/${uid}`
+    );
+
+    return letterFound;
+  }
 
   create(newLetter) {
     newLetter.head.uid = Iara.generateUID();
@@ -11,7 +26,7 @@ class LetterEntity
     console.log(newLetter);
 
     FirebaseService.db.writeData(
-      `letters/${newLetter.head.uid}`, 
+      `${this.entity}/${newLetter.head.uid}`, 
       newLetter
     );
   }
@@ -20,7 +35,7 @@ class LetterEntity
     console.log(changedLetter)
 
     FirebaseService.db.updateData(
-      `letters/${changedLetter.head.uid}`,
+      `${this.entity}/${changedLetter.head.uid}`,
       changedLetter
     );
   }
@@ -28,7 +43,7 @@ class LetterEntity
   delete(letterUID) {
     console.log(letterUID)
 
-    FirebaseService.db.deleteData(`letters/${letterUID}`);
+    FirebaseService.db.deleteData(`${this.entity}/${letterUID}`);
   }
 
 }
