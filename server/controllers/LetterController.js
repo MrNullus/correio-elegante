@@ -95,8 +95,8 @@ class LetterController {
    */
   async deleteData(request, response) {
     try {
-      const letterUID = request.body.uid
-      LetterEntity.deleteData(letterUID);
+      const letterUID = request.params.uid;
+      LetterEntity.delete(letterUID);
 
       response.send({ status: 200, message: 'Carta Elegante deletada com sucesso' });
     } catch(error) {
