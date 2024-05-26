@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-
+const CONFIGS = require('./configs/')
 const app = express();
+
 
 app.use(cors());
 app.use(express.json());
@@ -15,6 +16,8 @@ app.use('/api/correio-elegante/letters', letterRoutes);
 const swaggerSetup = require('./swagger');
 swaggerSetup(app);
 
-app.listen(3000, () => {
+
+app.listen(CONFIGS.SERVER_PORT, () => {
   console.log('Servidor iniciado na porta 3000');
 });
+

@@ -23,7 +23,7 @@ const LetterController = require('../controllers/LetterController');
  *       '500':
  *         description: Erro interno do servidor.
  */
-//router.get('/', LetterController.selectAll);
+router.get('/', LetterController.selectAll);
 
 
 /**
@@ -66,7 +66,7 @@ const LetterController = require('../controllers/LetterController');
  *       '500':
  *         description: Erro interno do servidor.
  */
-router.get('/:uid', LetterController.selectByID);
+router.get('/:uid', LetterController.selectByUID);
 
 
 /**
@@ -83,20 +83,27 @@ router.get('/:uid', LetterController.selectByID);
  *           schema:
  *             type: object
  *             properties:
- *               id:  
- *                 type: integer  
- *                 description: ID do correio elegante (gerado automaticamente)
- *               uid:   
- *                 type: string
- *                 description: UID do correio elegante
- *               created_at:
- *                 type: string  
- *                 format: date-time
- *                 description: Data de Criação (gerada automaticamente)
- *               updated_at:    
- *                 type: string  
- *                 format: date-time
- *                 description: Data de Atualização (gerada automaticamente)
+ *               head:
+ *                 type: object
+ *                 properties:
+ *                    id:  
+ *                      type: integer  
+ *                      description: ID do correio elegante (gerado automaticamente)
+ *                    uid:   
+ *                      type: string
+ *                      description: UID do correio elegante
+ *                    created_at:
+ *                      type: string  
+ *                      format: date-time
+ *                      description: Data de Criação (gerada automaticamente)
+ *                    updated_at:    
+ *                      type: string  
+ *                      format: date-time
+ *                      description: Data de Atualização (gerada automaticamente)
+ *                    type:   
+ *                      type: string
+ *                      description: Tipo do Correio Elegante
+ *
  *               payment:
  *                 type: object  
  *                 properties:
@@ -109,9 +116,7 @@ router.get('/:uid', LetterController.selectByID);
  *                   price:   
  *                     type: number
  *                     description: Valor a ser pago
- *               type:   
- *                 type: string
- *                 description: Tipo do Correio Elegante
+
  *               style:   
  *                 type: object  
  *                 properties:
@@ -157,7 +162,7 @@ router.get('/:uid', LetterController.selectByID);
  *       '500':
  *         description: Erro interno do servidor.
  */
-//router.post('/', LetterController.updateData);
+router.post('/', LetterController.insertData);
 
 
 /**
@@ -248,7 +253,7 @@ router.get('/:uid', LetterController.selectByID);
  *       '500':
  *         description: Erro interno do servidor.
  */
-//router.put('/:uid', LetterController.updateData);
+router.put('/:uid', LetterController.updateData);
 
 
 /**
@@ -270,6 +275,6 @@ router.get('/:uid', LetterController.selectByID);
  *       '500':
  *         description: Erro interno do servidor.
  */
-//router.delete('/:uid', LetterController.deleteData);
+router.delete('/:uid', LetterController.deleteData);
 
 module.exports = router;
