@@ -10,7 +10,7 @@ class LetterController {
    */
   async selectAll(request, response) {
     // Retrive Letters
-    const letters = FirebaseService.db.getAllDataIn('letters');
+    const letters = LetterEntity.getAll();
 
     // Send letters
     letters
@@ -33,20 +33,21 @@ class LetterController {
     const letterUID = request.params.uid;
 
     // Retrive Letter by UID
-    const letterFound = FirebaseService.db.getByPath(`letters/${letterUID}`);
+    const letterFound = LetterEntity.getByUID(letterUID);
 
     // Send Letter Found
-    //console.log(letterUID);
+    console.log(letterUID);
     letterFound
       .then((letter) => { 
+        console.log(letterFound);
         if (letter.status === 404) {
           response.send('Correio não encontrado');
           return;
         }
-        response.send({letter, status: 200});
+        response.send({ letter, status: 200, message: "Correio encontrado com sucesso" });
       })
       .catch((error) => {
-        response.send({ error: "Erro Inesperado", status: 404 });
+        response.send({ error, message: "Erro Inesperado", status: 404 });
       })
   }
 
@@ -57,13 +58,16 @@ class LetterController {
    * @returns {object} - Mensagem de sucesso.
    */
   async insertData(request, response) {
-    // Get data of request
-    try {
+    try{
+      // Get data of request
       const data = request.body;
+
+      // Send data for creation Letter
       LetterEntity.create(data);
 
       response.send({ status: 200, message: 'Carta elegante inserida com sucesso.' });
     } catch(error) {
+      // Send Response if do not create Letter
       console.log(error);
       response.send({ status: 500, message: 'Erro interno do servidor.' })
     }

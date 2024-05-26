@@ -77,16 +77,16 @@
           if (snapshot.exists())
           {
             data = snapshot.val();
-            //console.log(data);
+            console.log(data);
           } 
           else 
           {
-            //console.log("nem existe");
+            console.log((snapshot.val()));
             data.status = 404;
           }
         })
         .catch( (error ) => {
-          //cobsole.log(error);
+          console.log(error);
           data.status = 500;
         });
 
