@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Server for Correio Elegante",
   "main": "index.js",
-  "type": "module",
   "author": "Mr. Nullus",
   "license": "MIT",
   "scripts": {
