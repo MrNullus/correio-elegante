@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const CONFIGS = require('./configs/')
 const app = express();
-import express from 'express';
 
 app.use(cors());
 app.use(express.json());
