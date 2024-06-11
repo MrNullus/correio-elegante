@@ -1,5 +1,4 @@
-const FirebaseService = require("../services/firebase/index.jsx");
-const LetterEntity = require("../entities/Letter.js");
+const LetterEntity = require("../../entities/Letter.js");
 
 class LetterController {
   /**

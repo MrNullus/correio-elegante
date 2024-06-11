@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const LetterController = require('../controllers/LetterController');
-
+const LetterController = require('../controllers/Letter/');
 
 /**
  * @swagger
