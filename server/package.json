@@ -1,15 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Server for 'Correio Elegante'",
+  "description": "Server for Correio Elegante",
   "main": "index.js",
   "author": "Mr. Nullus",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "db:init": "node database/schema.js",
     "dev": "nodemon index.js",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "build": "npm run clean && babel src -d dist",
     "clean": "rm -rf dist"
   },
@@ -18,9 +17,14 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "firebase": "^10.11.1",
-    "mysql": "^2.18.1",
     "nodemon": "^2.0.22",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "faker": "^6.6.6",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }

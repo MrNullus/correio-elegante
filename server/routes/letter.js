@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const LetterController = require('../controllers/LetterController');
-
+const LetterController = require('../controllers/Letter/');
 
 /**
  * @swagger
@@ -86,9 +85,6 @@ router.get('/:uid', LetterController.selectByUID);
  *               head:
  *                 type: object
  *                 properties:
- *                    id:  
- *                      type: integer  
- *                      description: ID do correio elegante (gerado automaticamente)
  *                    uid:   
  *                      type: string
  *                      description: UID do correio elegante
@@ -182,9 +178,6 @@ router.post('/', LetterController.insertData);
  *               head:
  *                 type: object
  *                 properties:
- *                    id:  
- *                      type: integer  
- *                      description: ID do correio elegante (gerado automaticamente)
  *                    uid:   
  *                      type: string
  *                      description: UID do correio elegante

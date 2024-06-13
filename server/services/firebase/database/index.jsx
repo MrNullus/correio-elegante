@@ -9,7 +9,7 @@
     {
       this.db = db;
     }
-   
+
     /**
     * Retrieves all data from the specified path in Firebase Realtime Database.
     *
@@ -26,29 +26,30 @@
     * ```
    */
     async getAllDataIn( path ) 
-    {
+  {
       const dbRef = ref(this.db);
       let data = [];
 
       await get(child(dbRef, path))
-        .then(( items ) => {
-          items.forEach(( item ) => {
-            data = [ ...data, item.val()];
-            //console.log(item.val());
-          }); 
+      .then(( items ) => {
+        items.forEach(( item ) => {
+          data = [ ...data, item.val()];
+          //console.log(item.val());
+        }); 
 
-          //console.log(items);
-        })
-        .catch( (error ) => {
-          //console.log(error);
-          data.status = 500;
-        });
+        //console.log(items);
+      })
+      .catch( (error ) => {
+        //console.log(error);
+        data.status = 500;
+        data.errorFirebase = error
+      });
 
       console.log(data);
       return data;
-    }
-    
-  /**
+  }
+
+    /**
    * Retrieves data from a specific path in Firebase Realtime Database.
    *
    * @param {string} path The path to the data location in Firebase Realtime Database.
@@ -68,27 +69,28 @@
    * ```
    */
     async getByPath( path ) 
-    {
+   {
       const dbRef = ref(this.db);
       let data = {};
 
       await get(child(dbRef, path))
-        .then(( snapshot ) => {
-          if (snapshot.exists())
-          {
-            data = snapshot.val();
-            console.log(data);
-          } 
-          else 
-          {
-            console.log((snapshot.val()));
-            data.status = 404;
-          }
-        })
-        .catch( (error ) => {
-          console.log(error);
-          data.status = 500;
-        });
+      .then(( snapshot ) => {
+        if (snapshot.exists())
+        {
+          data = snapshot.val();
+          // console.log(data);
+        } 
+        else 
+        {
+          // console.log((snapshot.val()));
+          data.status = 404;
+        }
+      })
+      .catch( (error ) => {
+        // console.log(error);
+        data.status = 500;
+        data.errorFirebase = error;
+      });
 
       return data;
     }
@@ -115,38 +117,25 @@
    * })();
    * ```
    */
-    async writeData(path, data) 
-    {
-      await set(ref(this.db, path), data)
-      .then(() => {
-        console.log(`Data write to path: ${path}`);
-      })
-      .catch((error) => {
-        console.log(`Error: ${error}`)
-      })
+    writeData(path, data) {
+      set(ref(this.db, path), data);
+
+      // console.log(`Data write to path: ${path}`);
     }
 
-    async updateData(path, data) {
-      await set(ref(this.db, path), data)
-      .then(() => {
-        console.log(`Data update to path: ${path}`);
-      })
-      .catch((error) => {
-        console.log(`Error: ${error}`)
-      })
+    updateData(path, data) {
+      set(ref(this.db, path), data);
+
+      // console.log(`Data update to path: ${path}`);
     }
 
-    async deleteData(path) {
-      await remove(ref(this.db, path))
-      .then(() => {
-        console.log(`Letter ${path} deleted with successfully`)
-      })
-      .catch((error) => {
-        console.log(`ERROR : ${error}`)
-      })
+    deleteData(path) {
+      remove(ref(this.db, path))
+
+      // console.log(`Letter ${path} deleted with successfully`);
+    }
+
   }
-
-}
 
 
 
