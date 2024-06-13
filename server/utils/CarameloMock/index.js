@@ -36,6 +36,15 @@ class CarameloMock {
     return this.entidadesSimuladas;
   }
 
+  gerarEntidadesApartirDaEntidade(entidade) {
+    let entidades = []
+
+    for (let i = 0; i <= this.configs.quantidadeDeDados; i++) {
+      entidades.push(entidade);
+    }
+
+    return entidades;
+  }
 
 }
 

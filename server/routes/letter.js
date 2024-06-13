@@ -85,9 +85,6 @@ router.get('/:uid', LetterController.selectByUID);
  *               head:
  *                 type: object
  *                 properties:
- *                    id:  
- *                      type: integer  
- *                      description: ID do correio elegante (gerado automaticamente)
  *                    uid:   
  *                      type: string
  *                      description: UID do correio elegante
@@ -181,9 +178,6 @@ router.post('/', LetterController.insertData);
  *               head:
  *                 type: object
  *                 properties:
- *                    id:  
- *                      type: integer  
- *                      description: ID do correio elegante (gerado automaticamente)
  *                    uid:   
  *                      type: string
  *                      description: UID do correio elegante

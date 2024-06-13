@@ -22,8 +22,7 @@ class LetterEntity
 
   create(newLetter) {
     newLetter.head.uid = Iara.generateUID();
-    newLetter.head.id  = Iara.generateID();
-    console.log(newLetter);
+    // console.log(newLetter);
 
     FirebaseService.db.writeData(
       `${this.entity}/${newLetter.head.uid}`, 
@@ -32,7 +31,7 @@ class LetterEntity
   }
 
   update(changedLetter) {
-    console.log(changedLetter)
+    // console.log(changedLetter)
 
     FirebaseService.db.updateData(
       `${this.entity}/${changedLetter.head.uid}`,
@@ -41,7 +40,7 @@ class LetterEntity
   }
 
   delete(letterUID) {
-    console.log(letterUID)
+    // console.log(letterUID)
 
     FirebaseService.db.deleteData(`${this.entity}/${letterUID}`);
   }
