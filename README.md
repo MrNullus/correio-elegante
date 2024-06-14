@@ -39,7 +39,7 @@ Para instalar e executar o Correio Elegante localmente, siga estas etapas:
 1. Clone o repositório: `git clone https://github.com/seu-usuario/correio-elegante.git`
 2. Acesse o diretório: `cd correio-elegante`
 3. Instale as dependências: `npm install`
-4. Inicie o servidor: `npm start`
+4. Inicie o servidor: `npm run dev`
 
 ## :rocket: Uso
 
