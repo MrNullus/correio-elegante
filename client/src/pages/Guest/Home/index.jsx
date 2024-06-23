@@ -1,7 +1,6 @@
-import React from 'react';
 import Header from '../../../components/Header';
 
-import './style.css';
+// import './style.css';
 
 // fazer links na pagina
 

@@ -3,7 +3,7 @@ import {
 } from "react";
 
 import ImageLogo from "../../assets/image/logo-nobg.png";
-import './style.css';
+// import './style.css';
 
 import {
   MdAdminPanelSettings
