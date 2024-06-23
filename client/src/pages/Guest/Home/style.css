@@ -18,14 +18,21 @@ main {
   flex-direction: column;
   gap: 8em;
   width: 100%;
-  place-items: center;
+  place-items: center;  
+  font-size: 12px;
 }
 
 .home-guest section {
-  max-width: 70%;
+  max-width: 80%;
   padding: 2.5rem;
   background: #fff;
   border-radius: 6pt;
+}
+
+.home-guest section article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .home-guest .welcome {
@@ -34,7 +41,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 1.5rem;
@@ -43,8 +49,13 @@ main {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.home-guest section .btn {
-  margin-top: 1rem;
+.home-guest .subtitle {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.home-guest .btn {
+  margin-top: 1.5rem;
   font-size: 1em;
   width: 250px;
 }
@@ -84,6 +95,8 @@ main {
 
 .home-guest .section-report {  
   background: rgba(0, 0, 0, 0.9);
+  width: 300px;
+  padding: 1.5rem;
 }
 
 .home-guest .section-report p,
@@ -91,8 +104,14 @@ main {
   color: whitesmoke;
 }
 
+.home-guest .section-report .btn-warning {
+  width: 160px;
+  display: flex;
+  align-items: center;   
+}
+
 .home-guest .section-report .subtitle i {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .home-guest .section-report .btn-warning {
