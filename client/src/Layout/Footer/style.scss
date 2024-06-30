@@ -1,0 +1,14 @@
+@import "../../assets/styles/main.scss";
+
+.app__footer {
+  background: $color-primary-black;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-secondary-white;
+
+  padding: 5rem 0;
+}
