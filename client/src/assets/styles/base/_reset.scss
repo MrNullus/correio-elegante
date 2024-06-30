@@ -14,24 +14,29 @@ body {
   font-family: $font-family-body;
   font-size: 1.6rem; // 16px
   line-height: 1.5;
-  color: $color-primary-dark;
+  color: $color-primary-black;
   height: 100%;
   letter-spacing: 1.15pt;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   margin-bottom: 1.6rem;
   font-family: $font-family-heading;
 }
-
 
 p {
   margin-bottom: 1.6rem;
   text-indent: 22pt;
 }
 
-ul, ol {
+ul,
+ol {
   list-style-type: none;
   margin-bottom: 1.6rem;
 }
@@ -41,7 +46,10 @@ a {
   color: inherit;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -59,4 +67,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
