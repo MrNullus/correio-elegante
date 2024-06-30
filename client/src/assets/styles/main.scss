@@ -1,8 +1,9 @@
-@import 'variables/colors';
-@import 'variables/fonts';
+@import "variables/colors";
+@import "variables/fonts";
 
-@import 'base/fonts';
-@import 'base/reset';
+@import "base/fonts";
+@import "base/reset";
 
-@import 'layout/template';
-@import 'layout/logo';
+@import "layout/template";
+
+@import "components/logo";
