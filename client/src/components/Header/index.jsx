@@ -3,15 +3,7 @@ import {
 } from "react";
 
 import ImageLogo from "../../assets/image/logo-nobg.png";
-import './style.css';
-
-import {
-  MdAdminPanelSettings
-} from 'react-icons/md';
-import {
-  CiMenuKebab
-} from "react-icons/ci";
-
+//import './style.scss';
 
 function Header({ type }) {
   const [showMenu,setShowMenu] = useState(false)
@@ -24,13 +16,13 @@ function Header({ type }) {
     <header className={`header header-${type}`}>
       <div className='container-image-logo'>
         <img
-          className='header__image-logo image-logo logo'
+          className='header__image-logo logo-image'
           alt='Correio Elegante'
           src={ ImageLogo }
         />
       </div>
 
-      <h1 className='header__text-logo text-logo'>
+      <h1 className='header__text-logo logo-text'>
         Correio Elegante
       </h1>
 

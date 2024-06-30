@@ -5,7 +5,7 @@ import { FormCreateMensagem } from '../../../components/FormCreateMensagem';
 import './style.css';
 
 
-const CreateMyMail = () => {
+const CreateMyLetter = () => {
   return (
     <>
     <Header type="guest" />
@@ -32,4 +32,4 @@ const CreateMyMail = () => {
   );
 };
 
-export default CreateMyMail;
+export default CreateMyLetter;

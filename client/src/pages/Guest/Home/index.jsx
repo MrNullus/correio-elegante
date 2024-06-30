@@ -1,18 +1,14 @@
-import React from 'react';
 import Header from '../../../components/Header';
 
-import './style.css';
-
-// fazer links na pagina
+// import './style.scss';
 
 const Home = () => {
   return (
     <>
-    <Header type="guest" />
-    <div className="wrapper">
-      
+      <Header type="guest" />
+
       <main className="home-guest">
-        
+
         <section className="welcome">
           <article>
             <h2 className="subtitle">
@@ -20,10 +16,7 @@ const Home = () => {
             </h2>
 
             <p>
-              Olá! Estamos muito felizes em vê-lo. Aqui, você pode enviar mensagens anônimas cheias de carinho e gentileza.
-            </p>
-            <p>
-              Navegue pelo nosso site, explore as diferentes opções e não hesite em enviar uma mensagem para alguém especial. Lembre-se, suas palavras têm o poder de trazer um sorriso para o rosto de alguém.
+              Neste universo mágico de palavras e sentimentos, você tem a oportunidade de enviar mensagens anônimas repletas de carinho e gentileza. Prepare-se para tocar corações e despertar sorrisos!
             </p>
           </article>
 
@@ -33,16 +26,18 @@ const Home = () => {
         </section>
 
         <section className="section-common">
-          <h2 className="subtitle">
-            Confira Nosso Catálogo!
-          </h2>
+          <article>
+            <h2 className="subtitle">
+              Confira Nosso Catálogo!
+            </h2>
 
-          <p>
-            Dê uma olhada nos nossos serviços exclusivos do Correio Elegante! Oferecemos uma variedade de opções para você expressar seus sentimentos de maneira única e especial. Temos tudo para ajudá-lo a demonstrar seu carinho.
-          </p>
-          <p>
-            Não perca tempo, explore nosso catálogo agora mesmo e encontre o serviço perfeito para fazer o dia de alguém mais brilhante!
-          </p>
+            <p>
+              Dê uma olhada nos nossos serviços exclusivos do Correio Elegante! Oferecemos uma variedade de opções para você expressar seus sentimentos de maneira única e especial. Temos tudo para ajudá-lo a demonstrar seu carinho.
+            </p>
+            <p>
+              Não perca tempo, explore nosso catálogo agora mesmo e encontre o serviço perfeito para fazer o dia de alguém mais brilhante!
+            </p>
+          </article>
 
           <button className="btn btn-success">
             Conferir agora!
@@ -51,27 +46,30 @@ const Home = () => {
 
 
         <section className="section-common section-report border-warning">
-          <h2 className="subtitle">
-             <i class="fi fi-rr-hexagon-exclamation"></i>
-            <br/><br/>
-            Sua opinião é importante!
-          </h2>
-          <br/>
+          <article>
+            <h2 className="subtitle">
+              Sua opinião é importante!
+            </h2>
 
-          <p>
-            Caso queira reportar algum erro, sugestão ou qualquer problema, não tema! Basta apenas clickar no botão logo abaixo e reportar a questão.
-          </p>
-          <br/>
+            <p>
+              Caso queira reportar algum erro, sugestão ou qualquer problema, não tema! 
+            </p>
+            <p> 
+              Basta apenas clickar no botão logo abaixo e reportar a questão.
+            </p>
+          </article>
 
           <button className="btn btn-warning">
-            Reportar!
+            <i class="fi fi-rr-hexagon-exclamation"></i>  Reportar!
           </button>
         </section>
-        <hr/>
-<br/><br/>
+
       </main>
-      
-    </div>
+
+      <footer>
+        <p>&copy; 2024 Correio Elegante 💌
+. Feito com amor e carinho.</p>
+      </footer>
     </>
   );
 };
