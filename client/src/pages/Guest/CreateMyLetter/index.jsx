@@ -1,34 +1,25 @@
-import React from 'react';
-import Header from '../../../components/Header';
-import { FormCreateMensagem } from '../../../components/FormCreateMensagem';
+import { FormCreateMensagem } from "../../../components/FormCreateMensagem";
+import Template from "../../../Layout/Template";
 
-import './style.css';
-
+//import './style.scss';
 
 const CreateMyLetter = () => {
   return (
-    <>
-    <Header type="guest" />
-    <div className="wrapper create-my-mail">
-      
-      <main>
-        
-        <section className="welcome">
-          <h2 className="title font-manuscrit">
-            Liberte seus pensamentos!
-          </h2>
-  
-          <p>
-            <i>Garantimos total anonimato e criptografia.</i>
-          </p>
-        </section>
+    <Template typeHeader="guest">
+      <div className="wrapper create-my-mail">
+        <main>
+          <section className="welcome">
+            <h2 className="title font-manuscrit">Liberte seus pensamentos!</h2>
 
+            <p>
+              <i>Garantimos total anonimato e criptografia.</i>
+            </p>
+          </section>
 
-        <FormCreateMensagem />
-
-      </main>
-    </div>
-    </>
+          <FormCreateMensagem />
+        </main>
+      </div>
+    </Template>
   );
 };
 
