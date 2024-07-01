@@ -1,9 +1,14 @@
+@import "libs/flaticons/main";
+
 @import "variables/colors";
 @import "variables/fonts";
 
 @import "base/fonts";
 @import "base/reset";
 
+@import "mixins/index";
+
 @import "layout/template";
 
 @import "components/logo";
+@import "components/menu-main";

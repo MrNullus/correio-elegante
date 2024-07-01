@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import ImageLogo from "../../assets/image/logo-nobg.png";
-//import './style.scss';
+import "./styles.scss";
 
 function Header({ type }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -42,53 +42,53 @@ function Header({ type }) {
           ) : (
             <>
               <item>
-                <a href="/" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/">
                   <i className="fi fi-rr-house-blank"></i>
                   &nbsp; Home
                 </a>
               </item>
 
               <item>
-                <a href="/our-catalogue" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/our-catalogue">
                   <i className="fi fi-rr-newspaper-open"></i>
                   &nbsp; Nosso Catálogo
                 </a>
               </item>
 
               <item>
-                <a href="/create-my-mail" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/create-my-mail">
                   <i className="fi fi-rr-envelope-plus"></i>
                   &nbsp; Criar meu Corrreio
                 </a>
               </item>
 
               <item>
-                <a href="/check-mail" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/check-mail">
                   <i className="fi fi-tr-envelope-open-text"></i>
                   &nbsp; Conferir Corrreio
                 </a>
               </item>
 
               <item>
-                <a href="/help-me-amorim" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/help-me-amorim">
                   <i className="fi fi-rr-heart-arrow"></i>
                   &nbsp; Ajuda-me Amorim
                 </a>
               </item>
 
               <item>
-                <a href="/report" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/report">
                   <i className="fi fi-rr-hexagon-exclamation"></i>
                   &nbsp; Reportar
                 </a>
               </item>
 
-              <item style={{ width: "100px" }}>
+              <item>
                 <hr className="separator" />
               </item>
 
               <item>
-                <a href="/auth/login" style={{ color: "rgb(253,40,104)" }}>
+                <a href="/auth/login">
                   <i className="fi fi-rr-clipboard-user"></i>
                   &nbsp; Login
                 </a>
