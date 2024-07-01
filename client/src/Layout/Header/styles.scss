@@ -1,0 +1,45 @@
+@import "../../assets/styles/main.scss";
+
+.app__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid darken($color-secondary-white, 10%);
+  padding: 4rem 2.5rem;
+
+  .btn-menu {
+    @include btn-general;
+  }
+
+  .btn-close {
+    @include btn-close;
+  }
+
+  menu {
+    @include menu-main;
+  }
+
+  @include for-size(phone-only) {
+    .header__text-logo {
+      font-size: 1rem;
+      display: none;
+    }
+
+    .container-image-logo {
+      flex-basis: 100px;
+    }
+
+    .header__icon-action {
+      font-size: 1rem;
+      padding: 0.15rem;
+      width: 75px;
+
+      button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

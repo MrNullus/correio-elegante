@@ -1,8 +1,14 @@
-@import 'variables/colors';
-@import 'variables/fonts';
+@import "libs/flaticons/main";
 
-@import 'base/fonts';
-@import 'base/reset';
+@import "variables/colors";
+@import "variables/fonts";
 
-@import 'layout/template';
-@import 'layout/logo';
+@import "base/fonts";
+@import "base/reset";
+
+@import "mixins/index";
+
+@import "layout/template";
+
+@import "components/logo";
+@import "components/menu-main";

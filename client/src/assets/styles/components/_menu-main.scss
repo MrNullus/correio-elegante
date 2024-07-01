@@ -1,0 +1,43 @@
+@mixin menu-main {
+  position: fixed;
+  top: 3px;
+  right: 3px;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: 80vw;
+  max-width: 90vw;
+  height: auto;
+  background: black;
+  z-index: 10000;
+
+  margin: 2pt;
+  border-radius: 12pt;
+
+  padding: 2rem;
+  padding-bottom: 3em;
+
+  item {
+    padding-bottom: 1.2rem;
+    color: $color-secondary-white;
+    width: 100%;
+
+    a {
+      padding: 1rem;
+      width: 100%;
+
+      &:hover {
+        border-bottom: 2px solid $color-secondary-red;
+      }
+
+      i {
+        color: $color-secondary-white;
+      }
+    }
+  }
+}

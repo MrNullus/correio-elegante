@@ -1,71 +1,54 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 //import axios from 'axios';
 
-import Header from '../../../components/Header';
-import { TableOrders } from '../../../components/TableOrders';
-import { SectionPreviewOrderStatistics } from '../../../components/SectionPreviewStatistics/';
-import { SectionQuickActions } from '../../../components/SectionQuickActions/'
-
-import './style.css';
-
+import { TableOrders } from "../../../components/TableOrders";
+import { SectionPreviewOrderStatistics } from "../../../components/SectionPreviewStatistics/";
+import { SectionQuickActions } from "../../../components/SectionQuickActions/";
 
 const Dashboard = () => {
+  return (
+    <div className="wrapper">
+      <main className="dashboard">
+        <section className="dash-content">
+          <div className="boxes">
+            <article className="box box-success">
+              <span className="box__title">Quantidade de Pedidos</span>
 
-    return (
-      <div className="wrapper">
-        <Header type="admin" />
+              <p>12</p>
+            </article>
 
-        <main className="dashboard">
-          <section className="dash-content">
-            <div className="boxes">
-              <article className="box box-success">
-                <span className="box__title">
-                  Quantidade de Pedidos
-                </span>
+            <article className="box box-success">
+              <span className="box__title">Lucro</span>
 
-                <p>12</p>
-              </article>
+              <p>R$ 54, 00</p>
+            </article>
 
-              <article className="box box-success">
-                <span className="box__title">
-                  Lucro
-                </span>
+            <article className="box box-alert">
+              <span className="box__title">Gastos</span>
 
-                <p>R$ 54, 00</p>
-              </article>
+              <p>R$ 67, 00</p>
+            </article>
+          </div>
+        </section>
 
-              <article className="box box-alert">
-                <span className="box__title">
-                  Gastos
-                </span>
+        <hr className="separator" />
 
-                <p>R$ 67, 00</p>
-              </article>
-            </div>
-          </section>
+        <section className="dash-content">
+          <h2 className="dash-content__title">Novos Pedidos</h2>
 
-          <hr className="separator" />
+          <TableOrders />
+        </section>
 
-          <section className="dash-content">
-            <h2 className="dash-content__title">
-              Novos Pedidos
-            </h2>
+        <hr className="separator" />
 
-            <TableOrders />
-          </section>
+        <SectionQuickActions />
 
-          <hr className="separator" />
+        <hr className="separator" />
 
-          <SectionQuickActions />
-          
-          <hr className="separator" />
-        
-          <SectionPreviewOrderStatistics />
-        </main>
-      </div>
-
-    );
+        <SectionPreviewOrderStatistics />
+      </main>
+    </div>
+  );
 };
 
 export default Dashboard;
-
