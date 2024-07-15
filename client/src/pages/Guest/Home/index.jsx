@@ -1,12 +1,12 @@
 import Template from "../../../Layout/Template";
 
-// import './style.scss';
+import "./styles.scss";
 
 const Home = () => {
   return (
     <Template typeHeader="guest">
       <main className="app__main">
-        <section className="welcome">
+        <section className="section-welcome">
           <article>
             <h2 className="subtitle">Bem-vindo ao Correio Elegante! 💌</h2>
 
@@ -17,10 +17,10 @@ const Home = () => {
             </p>
           </article>
 
-          <button className="btn btn-alert">Quero enviar o meu Correio</button>
+          <button className="btn-send">Quero enviar o meu Correio</button>
         </section>
 
-        <section className="section-common">
+        <section className="section-about-catalogue">
           <article>
             <h2 className="subtitle">Confira Nosso Catálogo!</h2>
 
@@ -36,7 +36,7 @@ const Home = () => {
             </p>
           </article>
 
-          <button className="btn btn-success">Conferir agora!</button>
+          <button className="btn-view">Conferir agora!</button>
         </section>
 
         <section className="section-common section-report border-warning">

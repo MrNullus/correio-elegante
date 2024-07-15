@@ -1,0 +1,46 @@
+@import '../../../assets/styles/variables/colors';
+@import '../../../assets/styles/mixins/index';
+
+.section-welcome {
+  background:
+          url('../../../assets/image/banners/typewriter-with-cupid.svg') no-repeat top/cover,
+          $color-terciary-black;
+  height: 95vh;
+
+  @include all-content-centralized;
+
+  color: $color-secondary-white;
+  text-align: center;
+
+  article {
+    display: grid;
+    grid-template-rows: 10rem;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+
+    min-width: 300px;
+    max-width: 800px;
+    padding: 0rem 4rem;
+
+    h2 {
+      color: $color-terciary-red;
+    }
+
+    p {
+      line-height: 3rem;
+    }
+  }
+
+  .btn-send {
+    @include btn-general;
+    height: 70px;
+    padding: 2rem;
+    background: $color-terciary-red;
+
+    font-size: 0.9em;
+    color: $color-secondary-white;
+    border: 2px groove $color-terciary-red;
+  }
+}
