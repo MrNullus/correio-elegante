@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ImageLogo from "../../assets/image/logo-nobg.png";
+import ImageLogo from "../../assets/image/logos/logo-nobg.png";
 import "./styles.scss";
 
 function Header({ type }) {

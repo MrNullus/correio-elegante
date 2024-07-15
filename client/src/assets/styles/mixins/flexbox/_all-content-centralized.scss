@@ -1,0 +1,8 @@
+@mixin all-content-centralized {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
