@@ -4,23 +4,21 @@
   right: 3px;
   z-index: 9999;
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  gap: 2rem;
 
-  width: 80vw;
-  max-width: 90vw;
+  width: 258px;
   height: auto;
+  justify-content: flex-end;
+  justify-items: flex-end;
+
   background: black;
   z-index: 10000;
 
   margin: 2pt;
   border-radius: 12pt;
 
-  padding: 2rem;
-  padding-bottom: 3em;
+  padding: 2rem 2rem 3em;
 
   item {
     padding-bottom: 1.2rem;
@@ -30,13 +28,14 @@
     a {
       padding: 1rem;
       width: 100%;
+      font-weight: 500;
 
       &:hover {
         border-bottom: 2px solid $color-secondary-red;
       }
 
       i {
-        color: $color-secondary-white;
+        color: $color-secondary-red;
       }
     }
   }
