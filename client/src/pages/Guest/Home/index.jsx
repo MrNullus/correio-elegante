@@ -42,7 +42,35 @@ const Home = () => {
                                 serviço perfeito para fazer o dia de alguém mais brilhante!
                             </p>
 
-                            <button className="btn-view">Conferir agora!</button>
+                            <div className="box-catalogue">
+                                <a className="btn-view">
+                                    <img
+                                        style={{width: '200px'}}
+                                        src="https://th.bing.com/th/id/OIG2.AnhDaRrCAWFP_qfdSium?w=1024&h=1024&rs=1&pid=ImgDetMain"
+                                        alt=""/>
+                                    <br/>
+                                    <br/>
+                                    Envelope Especial
+                                </a>
+                                <a className="btn-view">
+                                     <img
+                                        style={{width: '200px'}}
+                                        src="https://th.bing.com/th/id/OIG3.LyatYwUOzEgLSYEXuBi3?w=1024&h=1024&rs=1&pid=ImgDetMain"
+                                        alt=""/>
+                                    <br/>
+                                    <br/>
+                                    Pacote Especial
+                                </a>
+                                <a className="btn-view">
+                                     <img
+                                        style={{width: '200px'}}
+                                        src="https://th.bing.com/th/id/OIG1.PpYC5V301d.tb_o3ScKk?w=1024&h=1024&rs=1&pid=ImgDetMain"
+                                        alt="" />
+                                    <br/>
+                                    <br/>
+                                    Serviços Diferenciados
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </section>
