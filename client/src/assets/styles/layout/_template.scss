@@ -1,6 +1,6 @@
 #root {
   display: grid;
-  gap: 5rem;
+  //gap: 5rem;
   grid-template-rows: 1fr 100% 2fr;
   grid-template-areas: "header" "main" "footer";
 }
