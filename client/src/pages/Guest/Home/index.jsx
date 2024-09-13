@@ -6,11 +6,10 @@ const Home = () => {
     return (
         <Template typeHeader="guest">
 
-
             <main className="app__main">
 
                 <div
-                    className={"separator-gradient"}
+                    className={ "separator-gradient" }
                 >
                 </div>
                 <section className="section-welcome">
@@ -31,19 +30,21 @@ const Home = () => {
                     <article>
                         <h2 className="subtitle">Confira Nosso Catálogo!</h2>
 
-                        <p>
-                            Dê uma olhada nos nossos serviços exclusivos do Correio Elegante!
-                            Oferecemos uma variedade de opções para você expressar seus
-                            sentimentos de maneira única e especial. Temos tudo para ajudá-lo
-                            a demonstrar seu carinho.
-                        </p>
-                        <p>
-                            Não perca tempo, explore nosso catálogo agora mesmo e encontre o
-                            serviço perfeito para fazer o dia de alguém mais brilhante!
-                        </p>
-                    </article>
+                        <div className="wrapper">
+                            <p>
+                                Dê uma olhada nos nossos serviços exclusivos do Correio Elegante!
+                                Oferecemos uma variedade de opções para você expressar seus
+                                sentimentos de maneira única e especial. Temos tudo para ajudá-lo
+                                a demonstrar seu carinho.
+                            </p>
+                            <p>
+                                Não perca tempo, explore nosso catálogo agora mesmo e encontre o
+                                serviço perfeito para fazer o dia de alguém mais brilhante!
+                            </p>
 
-                    <button className="btn-view">Conferir agora!</button>
+                            <button className="btn-view">Conferir agora!</button>
+                        </div>
+                    </article>
                 </section>
 
                 <section className="section-common section-report border-warning">

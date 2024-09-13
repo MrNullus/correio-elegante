@@ -2,9 +2,8 @@
 @import '../../../assets/styles/mixins/index';
 
 .section-welcome {
-  background:
-          url('../../../assets/image/banners/typewriter-with-cupid.svg') no-repeat top/cover,
-          $color-terciary-black;
+  background: url('../../../assets/image/banners/typewriter-with-cupid.svg') no-repeat top/cover,
+  $color-terciary-black;
   height: 95vh;
 
   @include all-content-centralized;
@@ -33,15 +32,28 @@
       line-height: 3rem;
     }
   }
+}
 
-  .btn-send {
-    @include btn-general;
-    height: 70px;
-    padding: 2rem;
-    background: $color-terciary-red;
+.section-about-catalogue article {
+  height: 95vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 4rem;
 
-    font-size: 0.9em;
-    color: $color-secondary-white;
-    border: 2px groove $color-terciary-red;
+  h2 {
+    color: $color-terciary-red;
+    font-size: 3rem;
+  }
+
+  p {
+    line-height: 3rem;
+  }
+
+  .btn-view {
+    margin-top: 2rem;
   }
 }

@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 10px 20px;
 
-  font-size: 2.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
 
@@ -38,4 +38,19 @@
   text-align: center;
 
   color: $color-secondary-red;
+}
+
+.btn-view {
+  @include btn-general;
+}
+
+.btn-send {
+  @include btn-general;
+  height: 70px;
+  padding: 2rem;
+  background: $color-terciary-red;
+
+  font-size: 0.9em;
+  color: $color-secondary-white;
+  border: 2px groove $color-terciary-red;
 }
