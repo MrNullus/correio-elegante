@@ -34,6 +34,10 @@
   }
 }
 
+.section-about-catalogue {
+  margin-bottom: 1rem;
+}
+
 .section-about-catalogue article {
   display: flex;
   align-items: flex-start;
@@ -51,7 +55,6 @@
   p {
     line-height: 3rem;
   }
-
 
   .box-catalogue {
     @include all-content-centralized;
@@ -73,4 +76,36 @@
   }
 }
 
-// TODO: FAZER A SEÇÃO DE REPORT
+.section-report {
+  background: $color-terciary-black;
+  min-height: 600px!important;
+  min-width: 300px;
+  max-width: 460px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 3rem;
+
+  margin: 0 auto;
+  border: 4px dotted lighten($color-primary-yellow, 10%);
+  border-radius: 4rem;
+  padding: 16rem 4rem;
+
+  article {
+    @include all-content-centralized;
+
+    h2 {
+      color: $color-primary-yellow;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    p {
+      line-height: 3rem;
+      color: $color-secondary-white;
+    }
+  }
+}

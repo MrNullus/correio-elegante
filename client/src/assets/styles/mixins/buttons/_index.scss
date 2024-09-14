@@ -54,3 +54,22 @@
   color: $color-secondary-white;
   border: 2px groove $color-terciary-red;
 }
+
+.btn-warning {
+  @include btn-general;
+  background-color: $color-primary-yellow;
+  color: $color-primary-black;
+  font-size: 1.9rem;
+  line-height: 1pt;
+  border: 2px solid $color-primary-yellow;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  &:hover {
+    color: lighten($color-primary-yellow, 10%);
+  }
+}

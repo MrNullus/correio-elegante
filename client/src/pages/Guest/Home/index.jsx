@@ -23,7 +23,7 @@ const Home = () => {
                         </p>
                     </article>
 
-                    <button className="btn-send">Quero enviar o meu Correio</button>
+                    <a href={"/create-my-letter"} className="btn-send">Quero enviar o meu Correio</a>
                 </section>
 
                 <section className="section-about-catalogue">
@@ -88,10 +88,12 @@ const Home = () => {
                         </p>
                     </article>
 
-                    <button className="btn btn-warning">
+                    <button className="btn-warning">
                         <i className="fi fi-rr-hexagon-exclamation"></i> Reportar!
                     </button>
                 </section>
+
+                <br/><br/><br/><br/>
             </main>
         </Template>
     );
