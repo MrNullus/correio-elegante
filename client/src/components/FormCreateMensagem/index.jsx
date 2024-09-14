@@ -3,11 +3,10 @@ import { useState } from "react";
 import "./style.css";
 
 function FormCreateMensagem() {
-    const [colorInput, setColorInput] = useState();
 
     return (
         <>
-  
+
 
             <center className="envelope">
                 <div className="envelope-content">
@@ -64,14 +63,16 @@ function FormCreateMensagem() {
                                 </div>
                             </div>
 
-                            <hr className="separator" />
+                            <div className="letter-details">
+                                <hr className="separator"/>
+                            </div>
 
                             <div className="letter-details">
-                            <h3 className="subtitle">
-                                  Corpo
+                                <h3 className="subtitle">
+                                    Corpo
                                 </h3>
-                                
-                              <label htmlFor="">Mensagem</label>
+
+                                <label htmlFor="">Mensagem</label>
                                 <textarea
                                     className="input"
                                     name=""
@@ -161,14 +162,14 @@ function FormCreateMensagem() {
                                 <label className="sr-only"  htmlFor="forma_pagamento">
                                     Forma de Pagamento
                                 </label>
-                                
+
                                 <select
                                     name="methodPayment"
                                     id=""
                                     style={{
                                         width: "100%",
                                         marginTop: "0.6rem",
-                                        
+
                                         color: "black"
                                     }}
                                 >

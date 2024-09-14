@@ -23,7 +23,7 @@ const Home = () => {
                         </p>
                     </article>
 
-                    <a href="/create-my-letter" className="btn-send">Quero enviar o meu Correio</a>
+                    <a href="/user/create-my-letter" className="btn-send">Quero enviar o meu Correio</a>
                 </section>
 
                 <section className="section-about-catalogue">

@@ -1,0 +1,85 @@
+@import '../../../assets/styles/variables/colors';
+@import '../../../assets/styles/variables/fonts';
+@import '../../../assets/styles/mixins/index';
+
+.app__main  {
+  margin-bottom: 2rem;
+}
+
+.app__header-subtitle {
+  margin-top: 4rem;
+  border: none;
+  @include all-content-centralized;
+
+  h2 {
+    font-family: $font-family-body;
+    text-align: center;
+    color: $color-primary-black;
+  }
+}
+
+
+.container-envelope {
+  position: relative;
+  display: flex;
+  @include all-content-centralized;
+  margin-top: 2rem;
+
+  header {
+    @include all-content-centralized;
+    text-align: center;
+    width: 100%;
+
+    h2 {
+      font-family: $font-family-body;
+    }
+  }
+
+  .paper {
+    min-width: 420px;
+    height: auto;
+    max-width: 900px;
+    position: relative;
+    top: 0px;
+    left: 0%;
+    background: #ffffffd6;
+    //z-index: 1000;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 1rem;
+    border: 2px solid $color-secondary-white;
+    margin-bottom: 12rem;
+
+    h3 {
+      color: $color-secondary-red;
+      font-weight: 500;
+      font-size: 3rem;
+    }
+
+  }
+
+  .envelope {
+    max-width: 900px;
+    height: 100vh;
+    background-image: url("../../../assets/image/envelope-paper.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.form__letter-create {
+  .letter-details {
+    padding: 2rem;
+
+    .separator {
+      height: 2px;
+      background: lighten($color-primary-black, 84%);
+      border-radius: 12px;
+    }
+
+    input {
+      padding: 0.75rem;
+    }
+  }
+}
